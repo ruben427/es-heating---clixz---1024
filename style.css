@@ -1,0 +1,846 @@
+.element {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  align-items: center;
+  position: relative;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+.element .frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: var(--color-primary);
+}
+
+.element .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  flex: 0 0 auto;
+  padding: 0px;
+}
+
+.element .div {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 4.25px;
+  padding: 9.5px 20px 10px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .link-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .SVG-phone-icon {
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+
+.element .text-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Lato", Helvetica;
+  font-weight: 700;
+  color: var(--core-color-on-primary);
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.element .text-wrapper-2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: var(--core-color-on-primary);
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.element .container-2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 9.5px 20px 1.5px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .img {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .frame-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  padding: 48px 24px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: var(--color-primary);
+}
+
+.element .frame-2 {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.element .frame-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.element .text-wrapper-3 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: "Lato", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: 44px;
+  font-style: normal;
+}
+
+.element .hier-kunt-je-de {
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 21px;
+  letter-spacing: 0.18px;
+  line-height: 28px;
+}
+
+.element .d-isz-IQ-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 308px;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.element .d-isz-IQ {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  width: 100%;
+  flex-grow: 1;
+  object-fit: cover;
+  border-radius: 32px 32px 32px 0px;
+}
+
+.element .tiles-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 48px 24px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .tiles {
+  display: flex;
+  min-width: unset;
+  max-width: 1200px;
+  width: 100%;
+  align-items: stretch;
+  gap: 26px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .tile {
+  gap: 24px;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: var(--core-color-base-neutrals-100);
+  box-shadow: 0px 4px 0px #d6d9db;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  border-radius: 4px;
+}
+
+.element .div-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 37px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .frame-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .heading-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 114px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .heading {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 0px 0.59px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .koop-offerte-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px 13px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #000000;
+  border-radius: 60px;
+}
+
+.element .koop-offerte {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Lato", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: -0.28px;
+  line-height: 12px;
+  white-space: nowrap;
+}
+
+.element .frame-5 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .text-wrapper-4 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: "Lato", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 21px;
+  letter-spacing: 0.18px;
+  line-height: 24px;
+}
+
+.element .frame-6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .p {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-top: -1px;
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0.18px;
+  line-height: 24px;
+}
+
+.element .atom-button {
+  display: flex;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0px 28px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid;
+  border-color: var(--color-secondary);
+}
+
+.element .text {
+  position: relative;
+  width: fit-content;
+  font-family: "Lato", Helvetica;
+  font-weight: 600;
+  color: var(--color-cta);
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+  font-style: normal;
+}
+
+.element .frame-7 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 12px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .text-wrapper-5 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #585858;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.element .tile-2 {
+  gap: 49px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  border-radius: 4px;
+}
+
+.element .layer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 49px;
+  padding: 24px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  border-radius: 4px;
+}
+
+/* .layer / .group / .logo / .group-2 / .group-3 / .text-wrapper-6/7/8
+   — replaced by the reusable FeedbackWidget component (components/feedback-widget.css) */
+
+.element .frame-8 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 24px 48px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .frame-9 {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .frame-10 {
+  display: flex;
+  flex-direction: column;
+  max-width: 1024px;
+  align-items: center;
+  gap: 42px;
+  position: relative;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .text-wrapper-9 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: "Lato", Helvetica;
+  font-weight: 700;
+  color: #303030;
+  font-size: 56px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 64px;
+}
+
+.element .frame-11 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element .frame-12 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 80px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  z-index: 1;
+}
+
+.element .frame-13 {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  align-items: center;
+  position: relative;
+}
+
+.element .frame-14 {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element .text-wrapper-10 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 27px;
+}
+
+.element .frame-15 {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.element .text-wrapper-11 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 27px;
+  white-space: nowrap;
+}
+
+.element .frame-16 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 120px 48px 60px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  margin-top: -62px;
+  z-index: 0;
+  border-radius: 0px 48px 48px 48px;
+  border: 1px solid;
+  border-color: var(--color-primary);
+}
+
+.element .lorem-ipsum-dolor {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 27px;
+}
+
+.element .text-wrapper-12 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: 27px;
+}
+
+/* ─── Desktop: 769px and larger ─── */
+@media (min-width: 769px) {
+  /* Ensure full-width sections fill the viewport */
+  .element .frame,
+  .element .main-header,
+  .element .frame-wrapper,
+  .element .tiles-wrapper,
+  .element .frame-8 {
+    align-self: stretch;
+    width: 100%;
+  }
+
+  /* Header bar: full-width teal bg, content capped at 1200px */
+  .element .main-header {
+    padding: 0px 16px;
+  }
+
+  .element .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px;
+    justify-content: center;
+    gap: 0;
+  }
+
+  /* Hero section: teal bg edge-to-edge, inner content max 1200px */
+  .element .frame-wrapper {
+    padding: 48px 24px;
+  }
+
+  .element .frame-2 {
+    max-width: 1200px;
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .element .frame-3 {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  .element .d-isz-IQ-wrapper {
+    display: flex;
+    flex: 1 1 50%;
+    max-width: 50%;
+    height: 280px;
+  }
+
+  /* Tiles row */
+  .element .tiles-wrapper {
+    padding: 48px 24px;
+  }
+
+  .element .tiles {
+    max-width: 1200px;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .element .tile,
+  .element .tile-2 {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  /* Bottom section */
+  .element .frame-8 {
+    padding: 0px 24px 60px;
+  }
+
+  .element .frame-9 {
+    max-width: 1200px;
+  }
+
+  .element .frame-10 {
+    max-width: 1024px;
+    gap: 42px;
+  }
+
+  .element .frame-12 {
+    padding: 0px 80px;
+  }
+}
+
+/* ─── Mobile: 768px and smaller ─── */
+@media (max-width: 768px) {
+  /* Root container: full width, auto height */
+  .element {
+    width: 100%;
+    height: auto;
+    min-height: unset;
+  }
+
+  /* Header: show only the first USP on mobile */
+  .element .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .element .div {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 8px 16px;
+    gap: 8px;
+  }
+
+  .element .container-2 {
+    display: none;
+  }
+
+  /* Hero banner: stack vertically, hide image, add background */
+  .element .frame-wrapper {
+    padding: 0px 16px;
+    background-color: var(--color-primary);
+  }
+
+  .element .frame-2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    max-width: 100%;
+    padding: 48px 0px;
+  }
+
+  .element .frame-3 {
+    flex: unset;
+    width: 100%;
+  }
+
+  .element .text-wrapper-3 {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0;
+  }
+
+  .element .hier-kunt-je-de {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  /* Hide the hero image on mobile */
+  .element .d-isz-IQ-wrapper {
+    display: none;
+  }
+
+  /* Tiles section: stack cards vertically */
+  .element .tiles-wrapper {
+    padding: 16px;
+  }
+
+  .element .tiles {
+    flex-direction: column;
+    min-width: unset;
+    width: 100%;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .element .tile {
+    flex: unset;
+    width: 100%;
+  }
+
+  .element .tile-2 {
+    flex: unset;
+    width: 100%;
+    align-self: unset;
+  }
+
+  /* Review tile: center content */
+  .element .layer-wrapper {
+    align-items: center;
+    padding: 24px 16px;
+  }
+
+  /* "Van offerte tot installatie" section */
+  .element .frame-8 {
+    padding: 0px 16px;
+  }
+
+  .element .frame-10 {
+    gap: 24px;
+    max-width: 100%;
+  }
+
+  /* Title: smaller font */
+  .element .text-wrapper-9 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  /* Steps: stack vertically instead of horizontal row */
+  .element .frame-12 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px 0px;
+  }
+
+  .element .frame-13 {
+    flex-direction: row;
+    width: auto;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .element .frame-15 {
+    flex-direction: row;
+    width: auto;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+
+  .element .text-wrapper-10,
+  .element .text-wrapper-11 {
+    text-align: left;
+    white-space: normal;
+    width: auto;
+  }
+
+  /* Body text box: reduce padding, remove large border-radius offset */
+  .element .frame-16 {
+    padding: 48px 16px 32px;
+    margin-top: -32px;
+    border-radius: 0px 16px 16px 16px;
+  }
+
+  .element .lorem-ipsum-dolor,
+  .element .text-wrapper-12 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

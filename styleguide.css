@@ -1,0 +1,21 @@
+:root {
+  --headline-h3-desktop-1024-1279-font-family: "Outfit", Helvetica;
+  --headline-h3-desktop-1024-1279-font-weight: 500;
+  --headline-h3-desktop-1024-1279-font-size: 44px;
+  --headline-h3-desktop-1024-1279-letter-spacing: 0.44px;
+  --headline-h3-desktop-1024-1279-line-height: 53px;
+  --headline-h3-desktop-1024-1279-font-style: normal;
+  --text-copy-text-semi-bold-font-family: "Lato", Helvetica;
+  --text-copy-text-semi-bold-font-weight: 600;
+  --text-copy-text-semi-bold-font-size: 18px;
+  --text-copy-text-semi-bold-letter-spacing: 0.36px;
+  --text-copy-text-semi-bold-line-height: 150%;
+  --text-copy-text-semi-bold-font-style: normal;
+  --core-color-on-primary: var(--core-color-base-neutrals-000);
+  --core-color-secondary: var(--core-color-base-pink-600);
+  --core-color-primary: var(--core-color-base-teal-600);
+  --core-color-base-neutrals-100: rgba(214, 217, 219, 1);
+  --core-color-base-neutrals-000: rgba(255, 255, 255, 1);
+  --core-color-base-pink-600: rgba(184, 1, 83, 1);
+  --core-color-base-teal-600: rgba(0, 128, 128, 1);
+}

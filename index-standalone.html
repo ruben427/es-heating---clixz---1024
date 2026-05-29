@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <style>
+      /* ── Reset ── */
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+      @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap");
+
+      /* ── Variables & base ── */
+      :root {
+        --color-primary: #008080;
+        --color-secondary: #b80153;
+        --color-cta: #b80153;
+        --core-color-on-primary: rgba(255, 255, 255, 1);
+        --core-color-base-neutrals-100: rgba(214, 217, 219, 1);
+        --core-color-base-neutrals-000: rgba(255, 255, 255, 1);
+        --core-color-base-pink-600: rgba(184, 1, 83, 1);
+        --core-color-base-teal-600: rgba(0, 128, 128, 1);
+      }
+
+      * {
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+      }
+
+      html, body {
+        margin: 0;
+        height: 100%;
+      }
+
+      button:focus-visible {
+        outline: 2px solid #4a90e2 !important;
+        outline: -webkit-focus-ring-color auto 5px !important;
+      }
+
+      a { text-decoration: none; }
+
+      /* ── Layout ── */
+      .element {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        align-items: center;
+        position: relative;
+        background-color: #ffffff;
+        overflow-x: hidden;
+      }
+
+      .element .frame {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        flex: 0 0 auto;
+      }
+
+      /* ── Header ── */
+      .element .main-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 16px;
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        flex: 0 0 auto;
+        background-color: var(--color-primary);
+      }
+
+      .element .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        max-width: 1200px;
+        position: relative;
+        flex: 0 0 auto;
+        padding: 0px;
+      }
+
+      .element .div {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 4.25px;
+        padding: 9.5px 20px 10px;
+        position: relative;
+        flex: 0 0 auto;
+      }
+
+      .element .link-call {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        position: relative;
+        flex: 0 0 auto;
+      }
+
+      .element .SVG-phone-icon {
+        position: relative;
+        width: 12px;
+        height: 12px;
+      }
+
+      .element .text-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        margin-top: -1px;
+        font-family: "Lato", Helvetica;
+        font-weight: 700;
+        color: var(--core-color-on-primary);
+        font-size: 12px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: 16px;
+        white-space: nowrap;
+      }
+
+      .element .text-wrapper-2 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        margin-top: -1px;
+        font-family: "Lato", Helvetica;
+        font-weight: 400;
+        color: var(--core-color-on-primary);
+        font-size: 12px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: 16px;
+        white-space: nowrap;
+      }
+
+      .element .container-2 {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 9.5px 20px 1.5px;
+        position: relative;
+        flex: 0 0 auto;
+      }
+
+      .element .img {
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        flex: 0 0 auto;
+      }
+
+      /* ── Hero ── */
+      .element .frame-wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 24px;
+        padding: 48px 24px;
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        flex: 0 0 auto;
+        background-color: var(--color-primary);
+      }
+
+      .element .frame-2 {
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 48px;
+        position: relative;
+        flex: 1;
+        flex-grow: 1;
+      }
+
+      .element .frame-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        position: relative;
+        flex: 1;
+        flex-grow: 1;
+      }
+
+      .element .text-wrapper-3 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        align-self: stretch;
+        margin-top: -1px;
+        font-family: "Lato", Helvetica;
+        font-weight: 700;
+        color: #ffffff;
+        font-size: 36px;
+        letter-spacing: 0;
+        line-height: 44px;
+        font-style: normal;
+      }
+
+      .element .hier-kunt-je-de {
+        position: relative;
+        display: flex;
+        align-items: center;
+        align-self: stretch;
+        font-family: "Lato", Helvetica;
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 21px;
+        letter-spacing: 0.18px;
+        line-height: 28px;
+      }
+
+      .element .d-isz-IQ-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 308px;
+        align-items: flex-start;
+        gap: 12px;
+        position: relative;
+        flex: 1;
+        flex-grow: 1;
+      }
+
+      .element .d-isz-IQ {
+        position: relative;
+        flex: 1;
+        align-self: stretch;
+        width: 100%;
+        flex-grow: 1;
+        object-fit: cover;
+        border-radius: 32px 32px 32px 0px;
+      }
+
+      /* ── Tiles ── */
+      .element .tiles-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 48px 24px;
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        flex: 0 0 auto;
+      }
+
+      /* The outer grid: offerte tiles in col-1, feedback always in col-2 */
+      .element .tiles-grid {
+        display: grid;
+        grid-template-columns: 1fr 194px;
+        grid-template-rows: auto;
+        gap: 26px;
+        max-width: 1200px;
+        width: 100%;
+        align-items: start;
+      }
+
+      /* Offerte tiles sub-grid fills col-1, rows wrap per 2 tiles */
+      .element .tiles {
+        grid-column: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 26px;
+        align-items: start;
+      }
+
+      /* Feedback widget stays in col-2, row 1, top-aligned */
+      .element .tiles-feedback {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: start;
+      }
+
+      .element .tile {
+        gap: 24px;
+        padding: 24px;
+        background-color: #ffffff;
+        border: 1px solid;
+        border-color: var(--core-color-base-neutrals-100);
+        box-shadow: 0px 4px 0px #d6d9db;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        border-radius: 4px;
+      }
+
+      .element .div-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 37px;
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        flex: 0 0 auto;
+      }
+
+      .element .frame-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 13px;
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        flex: 0 0 auto;
+      }
+
+      .element .heading-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 114px;
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        flex: 0 0 auto;
+      }
+
+      .element .heading {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px 0px 0.59px;
+        position: relative;
+        flex: 0 0 auto;
+      }
+
+      .element .koop-offerte-wrapper {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 8px 13px;
+        position: relative;
+        flex: 0 0 auto;
+        background-color: #000000;
+        border-radius: 60px;
+      }
+
+      .element .koop-offerte {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        margin-top: -1px;
+        font-family: "Lato", Helvetica;
+        font-weight: 700;
+        color: #ffffff;
+        font-size: 12px;
+        letter-spacing: -0.28px;
+        line-height: 12px;
+        white-space: nowrap;
+      }
+
+      .element .frame-5 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3px;
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        flex: 0 0 auto;
+      }
+
+      .element .text-wrapper-4 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        align-self: stretch;
+        margin-top: -1px;
+        font-family: "Lato", Helvetica;
+        font-weight: 700;
+        color: #000000;
+        font-size: 21px;
+        letter-spacing: 0.18px;
+        line-height: 24px;
+      }
+
+      .element .frame-6 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        flex: 0 0 auto;
+      }
+
+      .element .p {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex: 1;
+        margin-top: -1px;
+        font-family: "Lato", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 18px;
+        letter-spacing: 0.18px;
+        line-height: 24px;
+      }
+
+      .element .atom-button {
+        display: flex;
+        height: 56px;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 0px 28px;
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 2px solid;
+        border-color: var(--color-secondary);
+      }
+
+      .element .text {
+        position: relative;
+        width: fit-content;
+        font-family: "Lato", Helvetica;
+        font-weight: 600;
+        color: var(--color-cta);
+        font-size: 18px;
+        letter-spacing: 0;
+        line-height: 24px;
+        white-space: nowrap;
+        font-style: normal;
+      }
+
+      .element .frame-7 {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 12px;
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        flex: 0 0 auto;
+      }
+
+      .element .text-wrapper-5 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        margin-top: -1px;
+        font-family: "Lato", Helvetica;
+        font-weight: 400;
+        color: #585858;
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: 18px;
+        white-space: nowrap;
+      }
+
+      .element .tile-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        border-radius: 4px;
+      }
+
+      .element .layer-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 0;
+        position: relative;
+        width: 100%;
+        flex: 0 0 auto;
+        border-radius: 4px;
+      }
+
+      /* ── Feedback Widget ── */
+      .fw-widget {
+        --fw-score-size: 42px;
+        --fw-meta-size: 18px;
+        --fw-text-color: #262626;
+        position: relative;
+        width: 194px;
+        height: 179px;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .fw-widget .fw-logo {
+        position: absolute;
+        width: 177px;
+        height: 50px;
+        top: 0;
+        left: 7px;
+        object-fit: contain;
+      }
+
+      .fw-widget .fw-stars {
+        position: absolute;
+        width: 100%;
+        height: 17.4%;
+        top: 82.6%;
+        left: 0;
+      }
+
+      .fw-widget .fw-stars-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .fw-widget .fw-body {
+        position: absolute;
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        top: calc(50% - 22px);
+        left: calc(50% - 91px);
+      }
+
+      .fw-widget .fw-score {
+        font-family: "Lato", Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: var(--fw-score-size);
+        color: var(--fw-text-color);
+        letter-spacing: 0;
+        line-height: 1;
+        white-space: nowrap;
+      }
+
+      .fw-widget .fw-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 117px;
+      }
+
+      .fw-widget .fw-count,
+      .fw-widget .fw-label {
+        font-family: "Lato", Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: var(--fw-meta-size);
+        color: var(--fw-text-color);
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      /* ── Bottom section ── */
+      .element .frame-8 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 24px 48px;
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        flex: 0 0 auto;
+      }
+
+      .element .frame-9 {
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        width: 100%;
+        align-items: center;
+        position: relative;
+        flex: 0 0 auto;
+      }
+
+      .element .frame-10 {
+        display: flex;
+        flex-direction: column;
+        max-width: 1024px;
+        align-items: center;
+        gap: 42px;
+        position: relative;
+        width: 100%;
+        flex: 0 0 auto;
+      }
+
+      .element .text-wrapper-9 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: stretch;
+        margin-top: -1px;
+        font-family: "Lato", Helvetica;
+        font-weight: 700;
+        color: #303030;
+        font-size: 56px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: 64px;
+      }
+
+      .element .frame-11 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        flex: 0 0 auto;
+      }
+
+      .element .frame-12 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 80px;
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        flex: 0 0 auto;
+        z-index: 1;
+      }
+
+      .element .frame-13 {
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        align-items: center;
+        position: relative;
+      }
+
+      .element .frame-14 {
+        position: relative;
+        flex: 0 0 auto;
+      }
+
+      .element .text-wrapper-10 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: stretch;
+        font-family: "Lato", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: 27px;
+      }
+
+      .element .frame-15 {
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .element .text-wrapper-11 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        font-family: "Lato", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: 27px;
+        white-space: nowrap;
+      }
+
+      .element .frame-16 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        padding: 120px 48px 60px;
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        flex: 0 0 auto;
+        margin-top: -62px;
+        z-index: 0;
+        border-radius: 0px 48px 48px 48px;
+        border: 1px solid;
+        border-color: var(--color-primary);
+      }
+
+      .element .lorem-ipsum-dolor {
+        position: relative;
+        align-self: stretch;
+        margin-top: -1px;
+        font-family: "Lato", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 18px;
+        letter-spacing: 0;
+        line-height: 27px;
+      }
+
+      .element .text-wrapper-12 {
+        position: relative;
+        align-self: stretch;
+        font-family: "Lato", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 18px;
+        text-align: right;
+        letter-spacing: 0;
+        line-height: 27px;
+      }
+
+      /* ── Desktop ≥ 769px ── */
+      @media (min-width: 769px) {
+        .element .frame,
+        .element .main-header,
+        .element .frame-wrapper,
+        .element .tiles-wrapper,
+        .element .frame-8 {
+          align-self: stretch;
+          width: 100%;
+        }
+
+        .element .main-header { padding: 0px 16px; }
+
+        .element .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0px;
+          justify-content: center;
+          gap: 0;
+        }
+
+        .element .frame-wrapper { padding: 48px 24px; }
+
+        .element .frame-2 {
+          max-width: 1200px;
+          flex-direction: row;
+          align-items: center;
+          gap: 48px;
+        }
+
+        .element .frame-3 {
+          flex: 1 1 50%;
+          max-width: 50%;
+        }
+
+        .element .d-isz-IQ-wrapper {
+          display: flex;
+          flex: 1 1 50%;
+          max-width: 50%;
+          height: 280px;
+        }
+
+        .element .tiles-wrapper { padding: 48px 24px; }
+
+        .element .tiles-grid {
+          grid-template-columns: 1fr 194px;
+        }
+
+        .element .tiles {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .element .frame-8 { padding: 0px 24px 60px; }
+        .element .frame-9 { max-width: 1200px; }
+        .element .frame-10 { max-width: 1024px; gap: 42px; }
+        .element .frame-12 { padding: 0px 80px; }
+      }
+
+      /* ── Mobile ≤ 768px ── */
+      @media (max-width: 768px) {
+        .element {
+          width: 100%;
+          height: auto;
+          min-height: unset;
+        }
+
+        .element .container {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .element .div {
+          width: 100%;
+          flex-wrap: wrap;
+          justify-content: center;
+          padding: 8px 16px;
+          gap: 8px;
+        }
+
+        .element .container-2 { display: none; }
+
+        .element .frame-wrapper {
+          padding: 0px 16px;
+          background-color: var(--color-primary);
+        }
+
+        .element .frame-2 {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0;
+          max-width: 100%;
+          padding: 48px 0px;
+        }
+
+        .element .frame-3 {
+          flex: unset;
+          width: 100%;
+        }
+
+        .element .text-wrapper-3 {
+          font-size: 32px;
+          line-height: 32px;
+          letter-spacing: 0;
+        }
+
+        .element .hier-kunt-je-de {
+          font-size: 18px;
+          line-height: 22px;
+        }
+
+        .element .d-isz-IQ-wrapper { display: none; }
+
+        .element .tiles-wrapper { padding: 16px; }
+
+        .element .tiles-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
+        .element .tiles {
+          grid-column: 1;
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
+        .element .tiles-feedback {
+          grid-column: 1;
+          grid-row: auto;
+        }
+
+        .element .tile {
+          width: 100%;
+        }
+
+        .element .layer-wrapper {
+          align-items: center;
+          padding: 24px 16px;
+        }
+
+        .fw-widget { margin: 0 auto; }
+
+        .element .frame-8 { padding: 0px 16px; }
+
+        .element .frame-10 {
+          gap: 24px;
+          max-width: 100%;
+        }
+
+        .element .text-wrapper-9 {
+          font-size: 32px;
+          line-height: 32px;
+        }
+
+        .element .frame-12 {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+          padding: 8px 0px;
+        }
+
+        .element .frame-13 {
+          flex-direction: row;
+          width: auto;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .element .frame-15 {
+          flex-direction: row;
+          width: auto;
+          align-items: center;
+          gap: 8px;
+          justify-content: flex-start;
+        }
+
+        .element .text-wrapper-10,
+        .element .text-wrapper-11 {
+          text-align: left;
+          white-space: normal;
+          width: auto;
+        }
+
+        .element .frame-16 {
+          padding: 48px 16px 32px;
+          margin-top: -32px;
+          border-radius: 0px 16px 16px 16px;
+        }
+
+        .element .lorem-ipsum-dolor,
+        .element .text-wrapper-12 {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="element" data-model-id="17305:969">
+      <div class="frame">
+        <div class="main-header">
+          <div class="container">
+            <div class="div">
+              <div class="link-call">
+                <img
+                  class="SVG-phone-icon"
+                  src="https://c.animaapp.com/mpr059owBJouij/img/svg---phone-icon.svg"
+                />
+                <div class="text-wrapper">088 027 8888</div>
+              </div>
+              <div class="text-wrapper-2">(24/7 bereikbaar)</div>
+            </div>
+            <div class="container-2">
+              <img
+                class="SVG-phone-icon"
+                src="https://c.animaapp.com/mpr059owBJouij/img/svg---phone-icon.svg"
+              />
+              <div class="text-wrapper-2">
+                Erkende en gecertificeerde monteurs
+              </div>
+            </div>
+            <div class="container-2">
+              <img
+                class="SVG-phone-icon"
+                src="https://c.animaapp.com/mpr059owBJouij/img/svg---phone-icon.svg"
+              />
+              <div class="text-wrapper-2">Klantwaardering 8.4</div>
+            </div>
+          </div>
+        </div>
+        <img
+          class="img"
+          src="https://c.animaapp.com/n495pQ6l/img/frame-48096118.svg"
+        />
+      </div>
+      <div class="frame-wrapper">
+        <div class="frame-2">
+          <div class="frame-3">
+            <div class="text-wrapper-3">Je persoonlijke aanbod</div>
+            <p class="hier-kunt-je-de">
+              Hier kunt je de voorstellen bekijken en eventueel ondertekenen.
+            </p>
+          </div>
+          <div class="d-isz-IQ-wrapper">
+            <img
+              class="d-isz-IQ"
+              src="https://c.animaapp.com/n495pQ6l/img/disziq.png"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="tiles-wrapper">
+        <div class="tiles-grid">
+          <!-- #QH.Offerte regel landingspagina# -->
+          <div class="tiles">
+            <div class="tile">
+              <div class="div-wrapper">
+                <div class="frame-4">
+                  <div class="heading-wrapper">
+                    <div class="heading">
+                      <div class="koop-offerte-wrapper">
+                        <div class="koop-offerte">KOOP OFFERTE</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="frame-5">
+                    <div class="text-wrapper-4">CV / Combiketel</div>
+                    <div class="frame-6">
+                      <p class="p">Agpo ferroli - Ferroli Bluesity 100</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-4">
+                <div class="atom-button">
+                  <div class="text">Bekijk de offerte</div>
+                </div>
+                <div class="frame-7">
+                  <p class="text-wrapper-5">versie 1.0.0 - 5 mei 2026</p>
+                </div>
+              </div>
+            </div>
+            <div class="tile">
+              <div class="div-wrapper">
+                <div class="frame-4">
+                  <div class="heading-wrapper">
+                    <div class="heading">
+                      <div class="koop-offerte-wrapper">
+                        <div class="koop-offerte">KOOP OFFERTE</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="frame-5">
+                    <div class="text-wrapper-4">CV / Combiketel</div>
+                    <div class="frame-6">
+                      <p class="p">Agpo ferroli - Ferroli Bluesity 100</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-4">
+                <div class="atom-button">
+                  <div class="text">Bekijk de offerte</div>
+                </div>
+                <div class="frame-7">
+                  <p class="text-wrapper-5">versie 1.0.0 - 5 mei 2026</p>
+                </div>
+              </div>
+            </div>
+            <div class="tile">
+              <div class="div-wrapper">
+                <div class="frame-4">
+                  <div class="heading-wrapper">
+                    <div class="heading">
+                      <div class="koop-offerte-wrapper">
+                        <div class="koop-offerte">KOOP OFFERTE</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="frame-5">
+                    <div class="text-wrapper-4">Warmtepomp</div>
+                    <div class="frame-6">
+                      <p class="p">Daikin Altherma 3 - EHBH04E9W</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-4">
+                <div class="atom-button">
+                  <div class="text">Bekijk de offerte</div>
+                </div>
+                <div class="frame-7">
+                  <p class="text-wrapper-5">versie 1.0.0 - 5 mei 2026</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /#QH.Offerte regel landingspagina# -->
+
+          <!-- Feedback widget — always right column, top-aligned -->
+          <div class="tiles-feedback">
+            <div class="tile-2">
+              <div class="layer-wrapper">
+                <div class="fw-widget">
+                  <img
+                    class="fw-logo"
+                    src="https://c.animaapp.com/n495pQ6l/img/logo-@2x.png"
+                    alt="Atom logo"
+                  />
+                  <div class="fw-stars">
+                    <img
+                      class="fw-stars-img"
+                      src="https://c.animaapp.com/n495pQ6l/img/group@2x.png"
+                      alt="star rating"
+                    />
+                  </div>
+                  <div class="fw-body">
+                    <div class="fw-score">8.3</div>
+                    <div class="fw-meta">
+                      <div class="fw-count">5277</div>
+                      <div class="fw-label">beoordelingen</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="frame-8">
+        <div class="frame-9">
+          <div class="frame-10">
+            <div class="text-wrapper-9">Van offerte tot installatie</div>
+            <div class="frame-11">
+              <div class="frame-12">
+                <div class="frame-13">
+                  <img
+                    class="frame-14"
+                    src="https://c.animaapp.com/n495pQ6l/img/frame-13.svg"
+                  />
+                  <div class="text-wrapper-10">Offerte</div>
+                </div>
+                <div class="frame-15">
+                  <img
+                    class="frame-14"
+                    src="https://c.animaapp.com/n495pQ6l/img/frame-16.svg"
+                  />
+                  <div class="text-wrapper-11">Akkoord</div>
+                </div>
+                <div class="frame-13">
+                  <img
+                    class="frame-14"
+                    src="https://c.animaapp.com/n495pQ6l/img/frame-16.svg"
+                  />
+                  <div class="text-wrapper-10">Installatie</div>
+                </div>
+                <div class="frame-15">
+                  <img
+                    class="frame-14"
+                    src="https://c.animaapp.com/n495pQ6l/img/frame-16.svg"
+                  />
+                  <div class="text-wrapper-10">Subsidieaanvraag*</div>
+                </div>
+              </div>
+              <div class="frame-16">
+                <p class="lorem-ipsum-dolor">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                  nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                  aliquip ex ea commodo consequat.&nbsp;&nbsp; Duis autem vel
+                  eum iriure dolor in hendrerit in vulputate velit esse molestie
+                  consequat, vel illum dolore eu feugiat nulla facilisis at vero
+                  eros et accumsan et iusto odio dignissim qui blandit praesent
+                  luptatum zzril delenit augue duis dolore te feugait nulla
+                  facilisi.
+                </p>
+                <div class="text-wrapper-12">
+                  *alleen i.c.m. verduurzamingsmaatregelen
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
