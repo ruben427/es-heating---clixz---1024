@@ -214,29 +214,49 @@
 
 /* Buitenste grid: tiles links, feedback-widget altijd rechts */
 .element .tiles-grid {
-  display: grid;
-  grid-template-columns: 1fr 194px;
-  grid-template-rows: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
   gap: 26px;
   max-width: 1200px;
   width: 100%;
-  align-items: start;
 }
 
-/* Tiles wrapper: 2 tiles per rij */
+/* Tiles wrapper: eigen div, 2 tiles per rij via grid */
 .element .tiles {
-  grid-column: 1;
+  flex: 1 1 0;
+  min-width: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 26px;
   align-items: start;
 }
 
-/* Feedback widget altijd in de laatste kolom, rij 1 */
+.element .tiles .tile-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.element .tiles .tile-table tbody,
+.element .tiles .tile-table tr,
+.element .tiles .tile-table td {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.element .tiles .tile {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Feedback widget: eigen div, vaste breedte, altijd top-aligned */
 .element .tiles-feedback {
-  grid-column: 2;
-  grid-row: 1;
-  align-self: start;
+  flex: 0 0 194px;
+  width: 194px;
+  align-self: flex-start;
 }
 
 .element .tile {
@@ -672,7 +692,8 @@
   }
 
   .element .tiles-grid {
-    grid-template-columns: 1fr 194px;
+    flex-direction: row;
+    align-items: flex-start;
   }
 
   .element .tiles {
@@ -766,7 +787,7 @@
   }
 
   .element .tiles-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 16px;
   }
 
@@ -776,8 +797,9 @@
   }
 
   .element .tiles-feedback {
-    grid-column: 1;
-    grid-row: auto;
+    flex: unset;
+    width: 100%;
+    align-self: auto;
   }
 
   .element .tile {

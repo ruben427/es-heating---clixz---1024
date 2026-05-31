@@ -18,6 +18,18 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 </instructions>
 
 <changelog>
+## 2026-05-31 (session 15)
+- `tile-table` tbody/tr/td gezet op `display:block; width:100%` zodat `.tile` de volledige kolombreedte pakt
+- `table-layout:fixed` toegevoegd aan `.tile-table` om col-width te forceren
+- Geen max-width op desktop — mobile behoudt bestaande `width:100%` via media query
+
+## 2026-05-31 (session 14)
+- Tiles en feedback-widget volledig losgekoppeld in `index.html`: tiles zitten nu in eigen `<div class="tiles">`, feedback in eigen `<div class="tiles-feedback">`
+- `.tiles-grid` in `style.css` omgezet van `display:grid` naar `display:flex; flex-direction:row; align-items:flex-start`
+- `.tiles` is nu `flex:1` met interne `grid-template-columns:1fr 1fr` — los van feedback
+- `.tiles-feedback` is `flex:0 0 194px; align-self:flex-start` — altijd top-aligned
+- Mobile: `tiles-grid` wordt `flex-direction:column`, `tiles-feedback` krijgt `width:100%`
+
 ## 2026-05-31 (session 13)
 - `.tile` divs gegroepeerd in één `<div class="tiles">` wrapper in `index.html`
 - `.tiles-grid` terug naar `1fr 194px` (tiles links, feedback rechts)
