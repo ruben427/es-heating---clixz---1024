@@ -23,30 +23,111 @@
 }
 
 /* ── Tile grid wrapper ── */
-.tiles-grid {
-  display: grid;
-  grid-template-columns: 1fr 194px;
-  gap: 26px;
+.element .tiles-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 48px 24px;
+  position: relative;
+  align-self: stretch;
   width: 100%;
-  max-width: 900px;
-  align-items: start;
+  flex: 0 0 auto;
 }
 
-/* Offerte tiles: 2 per row, wrap naturally */
-.tiles {
-  border-collapse: collapse;
-  grid-column: 1;
+/* Buitenste grid: tiles links, feedback-widget altijd rechts */
+.element .tiles-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 26px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Tiles wrapper: eigen div, 2 tiles per rij via grid */
+.element .tiles {
+  flex: 1 1 0;
+  min-width: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 26px;
   align-items: start;
 }
 
-/* Feedback always top-right */
-.tiles-feedback {
-  grid-column: 2;
-  grid-row: 1;
-  align-self: start;
+.element .tiles table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.element .tiles table tbody,
+.element .tiles table tr,
+.element .tiles table td {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.element .tiles .tile {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Feedback widget: eigen div, vaste breedte, altijd top-aligned */
+.element .tiles-feedback {
+  flex: 0 0 194px;
+  width: 194px;
+  align-self: flex-start;
+}
+
+/* ── Desktop media query voor tiles ── */
+@media (min-width: 769px) {
+  .element .tiles-wrapper {
+    padding: 48px 24px;
+  }
+
+  .element .tiles-grid {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .element .tiles {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ── Mobile media query voor tiles ── */
+@media (max-width: 768px) {
+  .element .tiles-wrapper {
+    padding: 16px;
+  }
+
+  .element .tiles-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .element .tiles {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .element .tiles-feedback {
+    flex: unset;
+    width: 100%;
+    align-self: auto;
+  }
+
+  .element .tile {
+    width: 100%;
+  }
+
+  .element .layer-wrapper {
+    align-items: center;
+    padding: 24px 16px;
+  }
 }
 
 /* ── Tile card ── */
@@ -255,10 +336,4 @@
   color: var(--fw-text-color);
   letter-spacing: 0;
   line-height: normal;
-}
-
-@media (max-width: 768px) {
-  .tile {
-    max-width: 380px;
-  }
 }

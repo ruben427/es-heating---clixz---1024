@@ -18,6 +18,11 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 </instructions>
 
 <changelog>
+## 2026-05-31 (session 16)
+- Alle tile-gerelateerde CSS (`.tile`, `.tile-2`, `.layer-wrapper`, `.tiles-wrapper`, `.tiles-grid`, `.tiles`, `.tiles-feedback`, badge/button/content classes) verplaatst van `style.css` naar `components/tile.css`
+- Bijbehorende desktop + mobile media-query blokken ook verwijderd uit `style.css`
+- `style.css` bevat nu alleen nog niet-tile pagina-stijlen
+
 ## 2026-05-31 (session 15)
 - `tile-table` tbody/tr/td gezet op `display:block; width:100%` zodat `.tile` de volledige kolombreedte pakt
 - `table-layout:fixed` toegevoegd aan `.tile-table` om col-width te forceren
