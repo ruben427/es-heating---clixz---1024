@@ -212,7 +212,7 @@
   flex: 0 0 auto;
 }
 
-/* Buitenste grid: offerte tiles links, feedback-widget altijd rechts */
+/* Buitenste grid: tiles links, feedback-widget altijd rechts */
 .element .tiles-grid {
   display: grid;
   grid-template-columns: 1fr 194px;
@@ -223,7 +223,7 @@
   align-items: start;
 }
 
-/* Offerte tiles sub-grid: 2 per rij, wrapping */
+/* Tiles wrapper: 2 tiles per rij */
 .element .tiles {
   grid-column: 1;
   display: grid;
@@ -232,7 +232,7 @@
   align-items: start;
 }
 
-/* Feedback widget: altijd kolom 2, rij 1, top-aligned */
+/* Feedback widget altijd in de laatste kolom, rij 1 */
 .element .tiles-feedback {
   grid-column: 2;
   grid-row: 1;
@@ -771,7 +771,6 @@
   }
 
   .element .tiles {
-    grid-column: 1;
     grid-template-columns: 1fr;
     gap: 16px;
   }

@@ -18,6 +18,40 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 </instructions>
 
 <changelog>
+## 2026-05-31 (session 13)
+- `.tile` divs gegroepeerd in één `<div class="tiles">` wrapper in `index.html`
+- `.tiles-grid` terug naar `1fr 194px` (tiles links, feedback rechts)
+- `.tiles` krijgt `grid-template-columns: 1fr 1fr` — 2 tiles per rij binnen de wrapper
+- Mobile: `.tiles` ook naar `1fr` zodat tiles verticaal stapelen
+
+## 2026-05-31 (session 12)
+- `tile-table` wrapper volledig verwijderd uit `index.html` en `components/tile.html`
+- `.tile` divs zijn nu directe grid-children van `.tiles-grid` — 2 tiles per rij via `grid-template-columns: 1fr 1fr 194px`
+- `.tile-table` CSS regels verwijderd uit `components/tile.css`
+
+## 2026-05-31 (session 11)
+- `<table class="tile-table">` in `index.html` vervangen door `<div class="tile-table">` — geen table markup meer nodig in index
+- `tile.html` behoudt nog steeds de `<table>` wrapper voor het externe injectiesysteem
+
+## 2026-05-31 (session 10)
+- Verplaatst `.tile-table` CSS van `style.css` naar `components/tile.css`
+- `tile.html` heeft nu nog maar 1 `<link>` tag (alleen `tile.css`) — `style.css` link verwijderd
+- `.tile-table tr/tbody/td { display:contents }` nu ook in `tile.css` aanwezig (zonder `.element` scope)
+
+## 2026-05-31 (session 9)
+- Each injected tile now has its OWN `<table class="tile-table">` wrapper in `index.html`
+- `tile.html` stripped to bare minimum: only 2 `<link>` tags + `<table><tr><td><div class="tile">` — no head/html/style
+- `tiles-grid` CSS changed to `1fr 1fr 194px` so two tile columns flow naturally, feedback stays col-3
+- `.tile-table tr/tbody/td` all `display:contents` so `.tile` divs are direct grid children
+- Removed old single shared `<table class="tiles">` and all related `.tiles tr/td` grid rules
+
+## 2026-05-31 (session 8)
+- Fixed injection structure: `<table><tr><td>` now fixed in `index.html` as permanent wrapper
+- START/END markers now sit INSIDE the `<td>`, system injects only `.tile` divs between them
+- `<td>` styled as `display:grid; grid-template-columns:1fr 1fr` → tiles flow 2-per-row
+- Updated `style.css`: `.tiles tr { display:contents }`, `.tiles td { display:grid }`
+- Updated `components/tile.html` to match same structure (table>tr>td>markers>tile)
+
 ## 2026-05-31 (session 7)
 - Fixed `index.html`: elke `.tile` nu in eigen `<tr><td>` i.p.v. twee tiles in één `<td>`
 - Feedback widget blijft buiten de `<table>`, in `.tiles-feedback`

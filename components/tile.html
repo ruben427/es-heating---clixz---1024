@@ -1,81 +1,26 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <title>Tile Component</title>
-    <link rel="stylesheet" href="tile.css" />
-  </head>
-  <body>
-    <!-- ════════════════════════════════════
-         Tile Component — Offerte regel landingspagina
-         Usage: copy the tiles-grid block
-         into any page that imports the CSS above.
-         ════════════════════════════════════ -->
+<link
+  href="https://ruben427.github.io/es-heating---clixz---1024/components/tile.css"
+  rel="stylesheet"
+/>
 
-    <div class="tiles-grid">
-      <!-- START: Offerte regel landingspagina -->
-      <div class="tiles">
-        <table>
-          <tr>
-            <td>
-              <div class="tile">
-                <div class="tile__top">
-                  <div class="tile__badge-row">
-                    <div class="tile__badge">
-                      <span class="tile__badge-text">KOOP OFFERTE</span>
-                    </div>
-                  </div>
-                  <div class="tile__content">
-                    <div class="tile__title">CV / Combiketel</div>
-                    <div class="tile__subtitle">
-                      Agpo ferroli - Ferroli Bluesity 100
-                    </div>
-                  </div>
-                </div>
-                <div class="tile__bottom">
-                  <a href="#" class="tile__button">
-                    <span class="tile__button-text">Bekijk de offerte</span>
-                  </a>
-                  <div class="tile__version">
-                    <span class="tile__version-text"
-                      >versie 1.0.0 - 5 mei 2026</span
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="tile">
-                <div class="tile__top">
-                  <div class="tile__badge-row">
-                    <div class="tile__badge">
-                      <span class="tile__badge-text">KOOP OFFERTE</span>
-                    </div>
-                  </div>
-                  <div class="tile__content">
-                    <div class="tile__title">CV / Combiketel</div>
-                    <div class="tile__subtitle">
-                      Agpo ferroli - Ferroli Bluesity 100
-                    </div>
-                  </div>
-                </div>
-                <div class="tile__bottom">
-                  <a href="#" class="tile__button">
-                    <span class="tile__button-text">Bekijk de offerte</span>
-                  </a>
-                  <div class="tile__version">
-                    <span class="tile__version-text"
-                      >versie 1.0.0 - 5 mei 2026</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </table>
+<div class="tile">
+  <div class="tile__top">
+    <div class="tile__badge-row">
+      <div class="tile__badge">
+        <span class="tile__badge-text">#QuoteKindName#</span>
       </div>
-      <!-- END: Offerte regel landingspagina -->
-
-      <!-- Feedback widget — always right column, top-aligned -->
     </div>
-  </body>
-</html>
+    <div class="tile__content">
+      <div class="tile__title">#CategoryName#</div>
+      <div class="tile__subtitle">#BrandName# - #EquipmentModelName#</div>
+    </div>
+  </div>
+  <div class="tile__bottom">
+    <a class="tile__button" href="#Link#">
+      <span class="tile__button-text">Bekijk de offerte</span>
+    </a>
+    <div class="tile__version">
+      <span class="tile__version-text">versie #QuoteVersionName#</span>
+    </div>
+  </div>
+</div>
