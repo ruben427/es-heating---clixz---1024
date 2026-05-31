@@ -4,380 +4,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <title>Tile Component</title>
-    <style>
-      /* ── Reset & base ── */
-      @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-      @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap");
-
-      :root {
-        --color-primary:   #008080;
-        --color-secondary: #b80153;
-        --color-cta:       #b80153;
-        --core-color-base-neutrals-100: #e0e3e5;
-        --core-color-on-primary: #ffffff;
-      }
-
-      * {
-        -webkit-font-smoothing: antialiased;
-        box-sizing: border-box;
-      }
-
-      html, body {
-        margin: 0;
-        padding: 32px;
-        font-family: "Lato", Helvetica, sans-serif;
-        background: #f4f5f6;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        min-height: 100vh;
-      }
-
-      /* ── Tile card ── */
-      .tile {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        padding: 24px;
-        background-color: #ffffff;
-        border: 1px solid var(--core-color-base-neutrals-100);
-        box-shadow: 0px 4px 0px #d6d9db;
-        border-radius: 4px;
-        width: 100%;
-        max-width: 380px;
-      }
-
-      /* ── Top block: badge + title + subtitle ── */
-      .tile__top {
-        display: flex;
-        flex-direction: column;
-        gap: 13px;
-        width: 100%;
-      }
-
-      .tile__badge-row {
-        display: flex;
-        align-items: center;
-      }
-
-      .tile__badge {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        padding: 8px 13px;
-        background-color: #000000;
-        border-radius: 60px;
-      }
-
-      .tile__badge-text {
-        font-family: "Lato", Helvetica, sans-serif;
-        font-weight: 700;
-        color: #ffffff;
-        font-size: 12px;
-        letter-spacing: -0.28px;
-        line-height: 12px;
-        white-space: nowrap;
-      }
-
-      .tile__content {
-        display: flex;
-        flex-direction: column;
-        gap: 3px;
-        width: 100%;
-      }
-
-      .tile__title {
-        font-family: "Lato", Helvetica, sans-serif;
-        font-weight: 700;
-        color: #000000;
-        font-size: 21px;
-        letter-spacing: 0.18px;
-        line-height: 24px;
-      }
-
-      .tile__subtitle {
-        font-family: "Lato", Helvetica, sans-serif;
-        font-weight: 400;
-        color: #000000;
-        font-size: 18px;
-        letter-spacing: 0.18px;
-        line-height: 24px;
-      }
-
-      /* ── Bottom block: button + version ── */
-      .tile__bottom {
-        display: flex;
-        flex-direction: column;
-        gap: 13px;
-        width: 100%;
-      }
-
-      .tile__button {
-        display: flex;
-        height: 56px;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        padding: 0px 28px;
-        width: 100%;
-        border-radius: 8px;
-        border: 2px solid var(--color-secondary);
-        background: transparent;
-        cursor: pointer;
-        text-decoration: none;
-      }
-
-      .tile__button-text {
-        font-family: "Lato", Helvetica, sans-serif;
-        font-weight: 600;
-        color: var(--color-cta);
-        font-size: 18px;
-        letter-spacing: 0;
-        line-height: 24px;
-        white-space: nowrap;
-      }
-
-      .tile__version {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-      }
-
-      .tile__version-text {
-        font-family: "Lato", Helvetica, sans-serif;
-        font-weight: 400;
-        color: #585858;
-        font-size: 14px;
-        text-align: center;
-        letter-spacing: 0;
-        line-height: 18px;
-        white-space: nowrap;
-      }
-      /* ── Tile grid wrapper ── */
-      /* Outer grid: offerte tiles left, feedback right */
-      .tiles-grid {
-        display: grid;
-        grid-template-columns: 1fr 194px;
-        gap: 26px;
-        width: 100%;
-        max-width: 900px;
-        align-items: start;
-      }
-
-      /* Offerte tiles: 2 per row, wrap naturally */
-      .tiles {
-        grid-column: 1;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 26px;
-        align-items: start;
-      }
-
-      /* Feedback always top-right */
-      .tiles-feedback {
-        grid-column: 2;
-        grid-row: 1;
-        align-self: start;
-      }
-
-      /* Feedback placeholder styled like the main page */
-      .tile-2 {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        border-radius: 4px;
-      }
-
-      .layer-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-        width: 100%;
-      }
-
-      .fw-widget {
-        --fw-score-size: 42px;
-        --fw-meta-size: 18px;
-        --fw-text-color: #262626;
-        position: relative;
-        width: 194px;
-        height: 179px;
-        overflow: hidden;
-        flex-shrink: 0;
-      }
-
-      .fw-widget .fw-logo {
-        position: absolute;
-        width: 177px;
-        height: 50px;
-        top: 0;
-        left: 7px;
-        object-fit: contain;
-      }
-
-      .fw-widget .fw-stars {
-        position: absolute;
-        width: 100%;
-        height: 17.4%;
-        top: 82.6%;
-        left: 0;
-      }
-
-      .fw-widget .fw-stars-img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-
-      .fw-widget .fw-body {
-        position: absolute;
-        display: inline-flex;
-        align-items: center;
-        gap: 9px;
-        top: calc(50% - 22px);
-        left: calc(50% - 91px);
-      }
-
-      .fw-widget .fw-score {
-        font-family: "Lato", Helvetica, sans-serif;
-        font-weight: 700;
-        font-size: var(--fw-score-size);
-        color: var(--fw-text-color);
-        letter-spacing: 0;
-        line-height: 1;
-        white-space: nowrap;
-      }
-
-      .fw-widget .fw-meta {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 117px;
-      }
-
-      .fw-widget .fw-count,
-      .fw-widget .fw-label {
-        font-family: "Lato", Helvetica, sans-serif;
-        font-weight: 400;
-        font-size: var(--fw-meta-size);
-        color: var(--fw-text-color);
-        letter-spacing: 0;
-        line-height: normal;
-      }
-    </style>
+    <link rel="stylesheet" href="tile.css" />
   </head>
   <body>
     <!-- ════════════════════════════════════
-         Tile Component — #QH.Offerte regel landingspagina#
-         Usage: copy the <table class="tile-table"> block
+         Tile Component — Offerte regel landingspagina
+         Usage: copy the tiles-grid block
          into any page that imports the CSS above.
          ════════════════════════════════════ -->
 
     <div class="tiles-grid">
-      <!-- #QH.Offerte regel landingspagina# -->
+      <!-- START: Offerte regel landingspagina -->
       <div class="tiles">
-        <!-- Tile 1 -->
-        <div class="tile">
-          <div class="tile__top">
-            <div class="tile__badge-row">
-              <div class="tile__badge">
-                <span class="tile__badge-text">KOOP OFFERTE</span>
-              </div>
-            </div>
-            <div class="tile__content">
-              <div class="tile__title">CV / Combiketel</div>
-              <div class="tile__subtitle">
-                Agpo ferroli - Ferroli Bluesity 100
-              </div>
-            </div>
-          </div>
-          <div class="tile__bottom">
-            <a href="#" class="tile__button">
-              <span class="tile__button-text">Bekijk de offerte</span>
-            </a>
-            <div class="tile__version">
-              <span class="tile__version-text">versie 1.0.0 - 5 mei 2026</span>
-            </div>
-          </div>
-        </div>
-        <!-- Tile 2 -->
-        <div class="tile">
-          <div class="tile__top">
-            <div class="tile__badge-row">
-              <div class="tile__badge">
-                <span class="tile__badge-text">KOOP OFFERTE</span>
-              </div>
-            </div>
-            <div class="tile__content">
-              <div class="tile__title">Warmtepomp</div>
-              <div class="tile__subtitle">Daikin Altherma 3 - EHBH04E9W</div>
-            </div>
-          </div>
-          <div class="tile__bottom">
-            <a href="#" class="tile__button">
-              <span class="tile__button-text">Bekijk de offerte</span>
-            </a>
-            <div class="tile__version">
-              <span class="tile__version-text">versie 1.0.0 - 5 mei 2026</span>
-            </div>
-          </div>
-        </div>
-        <!-- Tile 3 — wraps to next row, left column -->
-        <div class="tile">
-          <div class="tile__top">
-            <div class="tile__badge-row">
-              <div class="tile__badge">
-                <span class="tile__badge-text">KOOP OFFERTE</span>
-              </div>
-            </div>
-            <div class="tile__content">
-              <div class="tile__title">Zonnepanelen</div>
-              <div class="tile__subtitle">SolarEdge SE5K - 14 panelen</div>
-            </div>
-          </div>
-          <div class="tile__bottom">
-            <a href="#" class="tile__button">
-              <span class="tile__button-text">Bekijk de offerte</span>
-            </a>
-            <div class="tile__version">
-              <span class="tile__version-text">versie 1.0.0 - 5 mei 2026</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /#QH.Offerte regel landingspagina# -->
-
-      <!-- Feedback widget — always right column, top-aligned -->
-      <div class="tiles-feedback">
-        <div class="tile-2">
-          <div class="layer-wrapper">
-            <div class="fw-widget">
-              <img
-                class="fw-logo"
-                src="https://c.animaapp.com/n495pQ6l/img/logo-@2x.png"
-                alt="Atom logo"
-              />
-              <div class="fw-stars">
-                <img
-                  class="fw-stars-img"
-                  src="https://c.animaapp.com/n495pQ6l/img/group@2x.png"
-                  alt="star rating"
-                />
-              </div>
-              <div class="fw-body">
-                <div class="fw-score">8.3</div>
-                <div class="fw-meta">
-                  <div class="fw-count">5277</div>
-                  <div class="fw-label">beoordelingen</div>
+        <table>
+          <tr>
+            <td>
+              <div class="tile">
+                <div class="tile__top">
+                  <div class="tile__badge-row">
+                    <div class="tile__badge">
+                      <span class="tile__badge-text">KOOP OFFERTE</span>
+                    </div>
+                  </div>
+                  <div class="tile__content">
+                    <div class="tile__title">CV / Combiketel</div>
+                    <div class="tile__subtitle">
+                      Agpo ferroli - Ferroli Bluesity 100
+                    </div>
+                  </div>
+                </div>
+                <div class="tile__bottom">
+                  <a href="#" class="tile__button">
+                    <span class="tile__button-text">Bekijk de offerte</span>
+                  </a>
+                  <div class="tile__version">
+                    <span class="tile__version-text"
+                      >versie 1.0.0 - 5 mei 2026</span
+                    >
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
+              <div class="tile">
+                <div class="tile__top">
+                  <div class="tile__badge-row">
+                    <div class="tile__badge">
+                      <span class="tile__badge-text">KOOP OFFERTE</span>
+                    </div>
+                  </div>
+                  <div class="tile__content">
+                    <div class="tile__title">CV / Combiketel</div>
+                    <div class="tile__subtitle">
+                      Agpo ferroli - Ferroli Bluesity 100
+                    </div>
+                  </div>
+                </div>
+                <div class="tile__bottom">
+                  <a href="#" class="tile__button">
+                    <span class="tile__button-text">Bekijk de offerte</span>
+                  </a>
+                  <div class="tile__version">
+                    <span class="tile__version-text"
+                      >versie 1.0.0 - 5 mei 2026</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
       </div>
+      <!-- END: Offerte regel landingspagina -->
+
+      <!-- Feedback widget — always right column, top-aligned -->
     </div>
   </body>
 </html>

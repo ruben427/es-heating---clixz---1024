@@ -1,0 +1,270 @@
+/* ══════════════════════════════════════
+   Tile Component Styles
+   components/tile.css
+   ══════════════════════════════════════ */
+
+/* ── Reset & base ── */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap");
+
+/* ── CSS Variables ── */
+:root {
+  --color-primary: #008080;
+  --color-secondary: #b80153;
+  --color-cta: #b80153;
+  --core-color-base-neutrals-100: #e0e3e5;
+  --core-color-on-primary: #ffffff;
+}
+
+/* ── Base reset ── */
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 32px;
+  font-family: "Lato", Helvetica, sans-serif;
+  background: #f4f5f6;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* ── Tile grid wrapper ── */
+.tiles-grid {
+  display: grid;
+  grid-template-columns: 1fr 194px;
+  gap: 26px;
+  width: 100%;
+  max-width: 900px;
+  align-items: start;
+}
+
+/* Offerte tiles: 2 per row, wrap naturally */
+.tiles {
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  align-items: start;
+}
+
+/* Feedback always top-right */
+.tiles-feedback {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: start;
+}
+
+/* ── Tile card ── */
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid var(--core-color-base-neutrals-100);
+  box-shadow: 0px 4px 0px #d6d9db;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 380px;
+}
+
+/* ── Top block: badge + title + subtitle ── */
+.tile__top {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  width: 100%;
+}
+
+.tile__badge-row {
+  display: flex;
+  align-items: center;
+}
+
+.tile__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px 13px;
+  background-color: #000000;
+  border-radius: 60px;
+}
+
+.tile__badge-text {
+  font-family: "Lato", Helvetica, sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: -0.28px;
+  line-height: 12px;
+  white-space: nowrap;
+}
+
+.tile__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 100%;
+}
+
+.tile__title {
+  font-family: "Lato", Helvetica, sans-serif;
+  font-weight: 700;
+  color: #000000;
+  font-size: 21px;
+  letter-spacing: 0.18px;
+  line-height: 24px;
+}
+
+.tile__subtitle {
+  font-family: "Lato", Helvetica, sans-serif;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0.18px;
+  line-height: 24px;
+}
+
+/* ── Bottom block: button + version ── */
+.tile__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  width: 100%;
+}
+
+.tile__button {
+  display: flex;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0px 28px;
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid var(--color-secondary);
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.tile__button-text {
+  font-family: "Lato", Helvetica, sans-serif;
+  font-weight: 600;
+  color: var(--color-cta);
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.tile__version {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.tile__version-text {
+  font-family: "Lato", Helvetica, sans-serif;
+  font-weight: 400;
+  color: #585858;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+/* ── Feedback widget (tile-2) ── */
+.tile-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 4px;
+}
+
+.layer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+}
+
+.fw-widget {
+  --fw-score-size: 42px;
+  --fw-meta-size: 18px;
+  --fw-text-color: #262626;
+  position: relative;
+  width: 194px;
+  height: 179px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.fw-widget .fw-logo {
+  position: absolute;
+  width: 177px;
+  height: 50px;
+  top: 0;
+  left: 7px;
+  object-fit: contain;
+}
+
+.fw-widget .fw-stars {
+  position: absolute;
+  width: 100%;
+  height: 17.4%;
+  top: 82.6%;
+  left: 0;
+}
+
+.fw-widget .fw-stars-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.fw-widget .fw-body {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  top: calc(50% - 22px);
+  left: calc(50% - 91px);
+}
+
+.fw-widget .fw-score {
+  font-family: "Lato", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: var(--fw-score-size);
+  color: var(--fw-text-color);
+  letter-spacing: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.fw-widget .fw-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 117px;
+}
+
+.fw-widget .fw-count,
+.fw-widget .fw-label {
+  font-family: "Lato", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: var(--fw-meta-size);
+  color: var(--fw-text-color);
+  letter-spacing: 0;
+  line-height: normal;
+}

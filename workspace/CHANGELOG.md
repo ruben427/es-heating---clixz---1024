@@ -18,6 +18,43 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 </instructions>
 
 <changelog>
+## 2026-05-31 (session 7)
+- Fixed `index.html`: elke `.tile` nu in eigen `<tr><td>` i.p.v. twee tiles in één `<td>`
+- Feedback widget blijft buiten de `<table>`, in `.tiles-feedback`
+- START/END markers zitten rondom alle `<tr>` rijen binnen de `<table>`
+
+## 2026-05-31 (session 6)
+- Corrected table/marker structure in `index.html`, `index-standalone.html`, `components/tile.html`
+- `<table>` now lives OUTSIDE the START/END markers; markers sit INSIDE `<table>` so system injects `<tr><td>tile</td></tr>` rows between them
+- `tile.html` now shows one `<tr><td><div class="tile">` as the repeating component example
+
+## 2026-05-31 (session 5)
+- Merged all separate `<table>` wrappers into ONE shared `<table>` in `components/tile.html`, `index.html`, `index-standalone.html`
+- Each tile is now a `<tr><td>` row inside one table — required so external system can inject regel-code rows
+
+## 2026-05-31 (session 4)
+- Wrapped every `.tile` div in `<table><tr><td>` in `components/tile.html`, `index.html`, `index-standalone.html`
+- Required by external templating system to inject regel-code between tiles
+
+## 2026-05-31 (session 3)
+- Replaced all `#QH.Offerte regel landingspagina#` markers with `<!-- START/END: Offerte regel landingspagina -->` in `components/tile.html`, `index.html`, `index-standalone.html`
+- Reason: `#` character conflicts with user&#39;s external templating system
+
+## 2026-05-31 (session 2)
+- Created `components/tile.css` — extracted all inline `<style>` from `components/tile.html`
+- `tile.html` `<head>` now has a single `<link rel="stylesheet" href="tile.css" />` instead of inline styles
+
+## 2026-05-31
+- Removed `<table><tr><td>` wrapper from inside `.tiles` in `index.html`
+- `.tile` divs are now direct children of `.tiles` so CSS grid picks them up correctly
+
+## 2026-05-29 (session 6)
+- Applied grid layout to `index.html` + `style.css` (was still using old `display:flex` on `.tiles`)
+- Added `tiles-grid`, `tiles`, `tiles-feedback` HTML structure to `index.html`
+- Updated `style.css`: `.tiles-grid` = `1fr 194px`, `.tiles` = `1fr 1fr` sub-grid, `.tiles-feedback` pinned col-2 row-1
+- Removed old `flex: 1` / `align-self: stretch` from `.tile` and `.tile-2` in `style.css`
+- Mobile: grids collapse to single column, feedback drops below tiles
+
 ## 2026-05-29 (session 5)
 - Replaced `<table>` layout with CSS grid in both `components/tile.html` and `index-standalone.html`
 - Outer grid: `tiles-grid` = `1fr 194px` (offerte tiles left, feedback widget always right)
