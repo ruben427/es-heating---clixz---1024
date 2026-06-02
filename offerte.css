@@ -511,11 +511,8 @@
 /* ── Jouw gegevens section ── */
 .offerte-page .jouw-gegevens {
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  padding: 0px 0px 48px;
-  align-self: stretch;
   width: 100%;
   max-width: 1200px;
 }
@@ -536,6 +533,7 @@
   gap: 12px;
   align-self: stretch;
   width: 100%;
+  max-width: 1200px;
 }
 
 .offerte-page .jouw-gegevens__col {
