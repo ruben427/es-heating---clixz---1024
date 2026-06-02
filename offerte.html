@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="offerte.css" />
     <link rel="stylesheet" href="components/site-header.css" />
+    <link rel="stylesheet" href="components/sticky-footer.css" />
   </head>
   <body>
     <div class="offerte-page">
@@ -53,27 +54,21 @@
       <div class="sh-wrapper">
         <div class="sh-inner">
           <a class="sh-logo" href="index.html" aria-label="ES Heating — home">
-            <img src="components/site-logo.svg" alt="ES Heating" />
+            <img
+              src="https://ruben427.github.io/es-heating---clixz---1024/img/logo_energiewacht.svg"
+              alt="Energiewacht"
+            />
           </a>
           <div class="sh-company">
-            <img src="components/company-logo.svg" alt="Clixz" />
+            <img
+              src="https://ruben427.github.io/es-heating---clixz---1024/img/samen_met_essent.svg"
+              alt="Samen met Essent"
+            />
           </div>
         </div>
       </div>
 
-      <!-- ── Back navigation ── -->
-      <div class="back-nav">
-        <div class="back-nav__inner">
-          <a class="back-btn" href="index.html">
-            <img
-              class="back-btn__icon"
-              src="https://c.animaapp.com/mpvmtxxcQTWbSC/img/icon-left.svg"
-              alt="terug"
-            />
-            <span class="back-btn__text">terug naar het overzicht</span>
-          </a>
-        </div>
-      </div>
+      <!-- ── Back link ── -->
 
       <!-- ── Content area ── -->
       <div class="content-area">
@@ -82,12 +77,33 @@
           <div class="col-main">
             <!-- Quote header -->
             <div class="quote-header">
+              <div class="quote-header__top">
+                <p>
+                  <a class="atom-button" href="index.html">
+                    <img
+                      class="atom-button__icon"
+                      src="https://c.animaapp.com/mpwog1i9v9lJ2w/img/icon-left.svg"
+                      alt=""
+                    />
+                    <span class="atom-button__text"
+                      >terug naar het overzicht</span
+                    >
+                  </a>
+                </p>
+                <p class="quote-intro-text">
+                  Deze offertelink heeft een maximale duur van 1 maand. Aan de
+                  rechterkant kunt u alle benodigde documenten downloaden voor
+                  uw eigen administratie.
+                </p>
+              </div>
               <div class="quote-meta">
-                <div class="quote-kind">Koop offerte</div>
-                <div class="quote-title">
-                  Agpo ferroli - Ferroli Bluesity 100
-                </div>
-                <div class="quote-version">versie 1.0.0 - 5 mei 2026</div>
+                <div class="quote-title">Je persoonlijke koop offerte</div>
+                <p class="quote-datum">
+                  <span class="quote-datum__date">Datum: 28-05-2026 -</span
+                  ><span class="quote-datum__version">
+                    versie 1.0.0 - 5 mei 2026</span
+                  >
+                </p>
               </div>
             </div>
 
@@ -170,6 +186,7 @@
                 aliquip ex ea commodo consequat.
               </div>
             </div>
+            <!-- Jouw gegevens -->
           </div>
           <!-- /col-main -->
 
@@ -201,8 +218,43 @@
           </div>
           <!-- /col-sidebar -->
         </div>
+        <div class="jouw-gegevens">
+          <div class="jouw-gegevens__title">Jouw gegevens</div>
+          <div class="jouw-gegevens__grid">
+            <div class="jouw-gegevens__col jouw-gegevens__col--label">
+              <div class="jouw-gegevens__label-bold">Naam:</div>
+              <div class="jouw-gegevens__label">Adres:</div>
+              <div class="jouw-gegevens__label">Postcode:</div>
+              <div class="jouw-gegevens__label">Woonplaats:</div>
+            </div>
+            <div class="jouw-gegevens__col jouw-gegevens__col--value">
+              <div class="jouw-gegevens__label-bold">#CustomerName#</div>
+              <div class="jouw-gegevens__label">#CustomerAddress#</div>
+              <div class="jouw-gegevens__label">#CustomerPostcode#</div>
+              <div class="jouw-gegevens__label">#CustomerCity#</div>
+            </div>
+            <div class="jouw-gegevens__col jouw-gegevens__col--label">
+              <div class="jouw-gegevens__label-bold">Telefoon:</div>
+              <div class="jouw-gegevens__label">E-mail:</div>
+              <div class="jouw-gegevens__label">IBAN:</div>
+            </div>
+            <div class="jouw-gegevens__col jouw-gegevens__col--value">
+              <div class="jouw-gegevens__label-bold">#CustomerPhone#</div>
+              <div class="jouw-gegevens__label">#CustomerEmail#</div>
+              <div class="jouw-gegevens__label">#CustomerIBAN#</div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- /content-area -->
+    </div>
+
+    <!-- ── Sticky Footer ── -->
+    <div class="sticky-footer">
+      <div class="sticky-footer__tile">
+        <a class="sticky-footer__btn-primary" href="#">Offerte ondertekenen</a>
+        <a class="sticky-footer__btn-secondary" href="#">Afwijzen</a>
+      </div>
     </div>
   </body>
 </html>

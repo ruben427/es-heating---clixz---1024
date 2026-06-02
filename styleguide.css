@@ -7,9 +7,9 @@
   --headline-h3-desktop-1024-1279-font-style: normal;
   --text-copy-text-semi-bold-font-family: "Lato", Helvetica;
   --text-copy-text-semi-bold-font-weight: 600;
-  --text-copy-text-semi-bold-font-size: 18px;
+  --text-copy-text-semi-bold-font-size: 16px;
   --text-copy-text-semi-bold-letter-spacing: 0.36px;
-  --text-copy-text-semi-bold-line-height: 150%;
+  --text-copy-text-semi-bold-line-height: 24px;
   --text-copy-text-semi-bold-font-style: normal;
   --core-color-on-primary: var(--core-color-base-neutrals-000);
   --core-color-secondary: var(--core-color-base-pink-600);

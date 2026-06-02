@@ -21,7 +21,6 @@
   width: 100%;
   flex: 0 0 auto;
   background-color: #ffffff;
-  border-bottom: 1px solid #e8ebed;
 }
 
 /* ── Inner container — max-width 1200px, horizontal layout ── */
@@ -31,7 +30,7 @@
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
-  padding: 20px 24px;
+  padding: 0 24px 20px;
   gap: 24px;
 }
 
@@ -41,12 +40,13 @@
   align-items: center;
   flex-shrink: 0;
   text-decoration: none;
+  padding-top: 20px;
 }
 
 .sh-logo img,
 .sh-logo svg {
   display: block;
-  height: 48px;
+  height: 40px;
   width: auto;
 }
 
@@ -61,24 +61,24 @@
 .sh-company img,
 .sh-company svg {
   display: block;
-  height: 48px;
+  height: 84px;
   width: auto;
 }
 
 /* ── Mobile ── */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .sh-inner {
-    padding: 16px;
+    padding: 0 16px 16px;
     gap: 16px;
   }
 
   .sh-logo img,
   .sh-logo svg {
-    height: 36px;
+    height: 30px;
   }
 
   .sh-company img,
   .sh-company svg {
-    height: 36px;
+    height: 60px;
   }
 }

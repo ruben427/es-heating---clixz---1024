@@ -18,6 +18,21 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 </instructions>
 
 <changelog>
+## 2026-06-02 (session 5)
+- All `font-size: 18px` → `16px` with `line-height: 24px` in `offerte.css`, `components/sticky-footer.css`, `styleguide.css`
+- Affected rules: `.quote-intro-text`, `.jouw-gegevens__title`, `.jouw-gegevens__label-bold`, `.jouw-gegevens__label`, `.sticky-footer__btn-primary`, `.sticky-footer__btn-secondary`, `--text-copy-text-semi-bold-*`
+
+## 2026-06-02 (session 4)
+- `offerte.css`: `.content-area` mobile (<768px) gets `padding-left: 16px; padding-right: 16px`
+
+## 2026-06-02 (session 3)
+- `offerte.css`: `.jouw-gegevens__grid` changed from `display:flex` to `display:grid; grid-template-columns: repeat(4, 1fr)` on desktop
+- Mobile (<768px): `.jouw-gegevens__grid` overridden to `grid-template-columns: repeat(2, 1fr)`
+
+## 2026-06-02 (session 2)
+- `components/site-header.css`: `.sh-inner` top padding removed (now `0 24px 20px` / mobile `0 16px 16px`)
+- `.sh-logo` gained `padding-top: 20px` to compensate
+
 ## 2026-06-02
 - Renamed class `SVG-phone-icon` → `chevron-bullit` in all files
 - Affected: `index.html` (3×), `offerte.html` (3×), `index-standalone.html` (3× HTML + 1× CSS), `style.css` (1×), `offerte.css` (1×)

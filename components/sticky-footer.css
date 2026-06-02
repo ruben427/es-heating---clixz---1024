@@ -1,0 +1,145 @@
+/* ══════════════════════════════════════
+   Sticky Footer Component
+   components/sticky-footer.css
+   ══════════════════════════════════════ */
+
+.sticky-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+  background: transparent;
+  pointer-events: none; /* let clicks pass through except the tile */
+}
+
+.sticky-footer__tile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px 24px;
+  background-color: #ffffff;
+  border-radius: 4px 4px 0 0;
+  border-top: 1px solid #d6d9db;
+  border-right: 1px solid #d6d9db;
+  border-left: 1px solid #d6d9db;
+  box-shadow: 0px -4px 0px #d6d9db;
+  pointer-events: all;
+}
+
+/* ── Primary button (filled) ── */
+.sticky-footer__btn-primary {
+  display: inline-flex;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 28px;
+  background-color: var(--color-cta, #b80153);
+  color: #ffffff;
+  border: 2px solid var(--color-cta, #b80153);
+  border-radius: 8px;
+  font-family: "Lato", Helvetica;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.36px;
+  line-height: 24px;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    opacity 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.sticky-footer__btn-primary:hover {
+  opacity: 0.88;
+}
+
+/* ── Secondary button (outlined) ── */
+.sticky-footer__btn-secondary {
+  display: inline-flex;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 28px;
+  background-color: transparent;
+  color: var(--color-cta, #b80153);
+  border: 2px solid var(--color-cta, #b80153);
+  border-radius: 8px;
+  font-family: "Lato", Helvetica;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.36px;
+  line-height: 24px;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    opacity 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.sticky-footer__btn-secondary:hover {
+  background-color: rgba(184, 1, 83, 0.06);
+}
+
+/* ══════════════════════════════════════
+   Breakpoint: ≤ 768px
+   Buttons become filled + horizontal
+   ══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .sticky-footer__tile {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .sticky-footer__btn-primary {
+    background-color: var(--color-cta, #b80153);
+    color: #ffffff;
+    border-color: var(--color-cta, #b80153);
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  .sticky-footer__btn-secondary {
+    background-color: transparent;
+    color: var(--color-cta, #b80153);
+    border-color: var(--color-cta, #b80153);
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  .sticky-footer__btn-secondary:hover {
+    background-color: rgba(184, 1, 83, 0.06);
+  }
+}
+
+/* ══════════════════════════════════════
+   Breakpoint: ≤ 480px
+   Buttons stack vertically, full width
+   ══════════════════════════════════════ */
+@media (max-width: 480px) {
+  .sticky-footer__tile {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .sticky-footer__btn-primary,
+  .sticky-footer__btn-secondary {
+    width: 100%;
+    flex: unset;
+  }
+}
