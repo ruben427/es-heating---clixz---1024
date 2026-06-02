@@ -45,29 +45,15 @@
   width: 100%;
 }
 
-/* Tiles wrapper: eigen div, 2 tiles per rij via grid */
+/* Tiles wrapper: eigen div, 1 tile per rij — full width */
 .element .tiles {
   flex: 1 1 0;
   min-width: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 26px;
-  align-items: start;
-}
-
-.element .tiles table {
+  align-items: stretch;
   width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-}
-
-.element .tiles table tbody,
-.element .tiles table tr,
-.element .tiles table td {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin: 0;
 }
 
 .element .tiles .tile {
@@ -94,7 +80,8 @@
   }
 
   .element .tiles {
-    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    width: 100%;
   }
 }
 
@@ -110,7 +97,7 @@
   }
 
   .element .tiles {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 16px;
   }
 

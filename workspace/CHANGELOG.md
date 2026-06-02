@@ -18,6 +18,49 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 </instructions>
 
 <changelog>
+## 2026-06-02 (session 14)
+- `index.html` + `index-standalone.html`: replaced all `<table>/<tr>/<td>` wrappers inside `.tiles` with plain `<div class="tile">` — tables were causing implicit grid layout
+- `components/tile.css`: removed table-reset rules (`.tiles table`, `.tiles table tbody/tr/td`) — no longer needed
+
+## 2026-06-02 (session 13)
+- `components/tile.css` + `index-standalone.html`: `.tiles` grid fully removed — now `display:flex; flex-direction:column` single column, full width
+- `index-standalone.html`: `.tiles-grid` converted from `display:grid` to `display:flex; flex-direction:row` with flex children; mobile collapses to `flex-direction:column`
+- `.tiles-feedback` updated to `flex: 0 0 194px` (desktop) / `width:100%` (mobile) in both files
+
+## 2026-06-02 (session 12)
+- `components/tile.css`: `.tiles` changed from `display:grid; grid-template-columns:1fr 1fr` to `display:flex; flex-direction:column` — all tiles now full width
+- Same change applied in both desktop and mobile media query blocks
+
+## 2026-06-02 (session 11)
+- Removed `mask-image` from mobile `.totaal-box` — it was hiding the left/right border at viewports ≤768px
+- No other styles changed; border is now fully visible on all breakpoints
+
+## 2026-06-02 (session 10)
+- `.row-product`: `gap` removed (was `12px`, now `0`)
+- `.col-price`: added `padding-left: 12px`
+- `.totaal-price`: added `padding-left: 12px; box-sizing: border-box`
+- Mobile `.totaal-row`: gap restored to `0`; `.totaal-price` explicitly `flex: 0 0 30%; width: 30%`
+
+## 2026-06-02 (session 9)
+- `.offerte-regel`: padding changed to `24px 12px`
+- `.totaal-box`: padding changed to `24px 12px`
+- `.col-price`: `align-items` changed to `flex-end` (right-align price column)
+- Mobile override `.field-value-price`: `text-align: right` (was erroneously `left`)
+
+## 2026-06-02 (session 8)
+- `.col-description` + `.totaal-label`: `flex: 0 0 70%; width: 70%` — 70% of row
+- `.col-price` + `.totaal-price`: `flex: 0 0 30%; width: 30%; min-width: 100px` — 30% of row
+- `.totaal-row`: `gap` removed (was `56px`, now `0`) — layout driven by widths
+- Applies to both `.row-product` and `.totaal-row`
+
+## 2026-06-02 (session 7)
+- `.totaal-box`: added `box-sizing: border-box` so the 1px border renders inside the element
+
+## 2026-06-02 (session 6)
+- Mobile `.offerte-regel`: `padding-left/right: 12px`
+- Mobile `.totaal-box`: left/right 12px fade via `mask-image` linear-gradient
+- Mobile `.row-product` no longer stacked — 2-col layout preserved (removed `flex-direction:column` override)
+
 ## 2026-06-02 (session 5)
 - All `font-size: 18px` → `16px` with `line-height: 24px` in `offerte.css`, `components/sticky-footer.css`, `styleguide.css`
 - Affected rules: `.quote-intro-text`, `.jouw-gegevens__title`, `.jouw-gegevens__label-bold`, `.jouw-gegevens__label`, `.sticky-footer__btn-primary`, `.sticky-footer__btn-secondary`, `--text-copy-text-semi-bold-*`
