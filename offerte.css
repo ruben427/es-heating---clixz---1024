@@ -517,6 +517,7 @@
   padding: 0px 0px 48px;
   align-self: stretch;
   width: 100%;
+  max-width: 1200px;
 }
 
 .offerte-page .jouw-gegevens__title {
