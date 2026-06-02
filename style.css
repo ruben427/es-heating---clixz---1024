@@ -60,7 +60,7 @@
   flex: 0 0 auto;
 }
 
-.element .SVG-phone-icon {
+.element .chevron-bullit {
   position: relative;
   width: 12px;
   height: 12px;
@@ -109,12 +109,7 @@
   flex: 0 0 auto;
 }
 
-.element .img {
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
-}
+/* .element .img — replaced by SiteHeader component (components/site-header.css) */
 
 .element .frame-wrapper {
   display: flex;
@@ -295,10 +290,10 @@
   font-family: "Lato", Helvetica;
   font-weight: 400;
   color: #000000;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   letter-spacing: 0;
-  line-height: 27px;
+  line-height: 24px;
 }
 
 .element .frame-15 {
@@ -319,10 +314,10 @@
   font-family: "Lato", Helvetica;
   font-weight: 400;
   color: #000000;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   letter-spacing: 0;
-  line-height: 27px;
+  line-height: 24px;
   white-space: nowrap;
 }
 
@@ -339,7 +334,7 @@
   flex: 0 0 auto;
   margin-top: -62px;
   z-index: 0;
-  border-radius: 0px 48px 48px 48px;
+  border-radius: 0px 32px 32px 32px;
   border: 1px solid;
   border-color: var(--color-primary);
 }
@@ -351,9 +346,9 @@
   font-family: "Lato", Helvetica;
   font-weight: 400;
   color: #000000;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0;
-  line-height: 27px;
+  line-height: 24px;
 }
 
 .element .text-wrapper-12 {
@@ -362,10 +357,10 @@
   font-family: "Lato", Helvetica;
   font-weight: 400;
   color: #000000;
-  font-size: 18px;
+  font-size: 16px;
   text-align: right;
   letter-spacing: 0;
-  line-height: 27px;
+  line-height: 24px;
 }
 
 /* ─── Desktop: 769px and larger ─── */
@@ -443,9 +438,15 @@
     width: 100%;
     height: auto;
     min-height: unset;
+    overflow-x: hidden;
   }
 
-  /* Header: show only the first USP on mobile */
+  /* Header frame: clip the fixed-width image without scrollbar */
+  .element .frame {
+    overflow: hidden;
+  }
+
+  /* Header bar: show only one centred USP on mobile */
   .element .container {
     flex-wrap: wrap;
     justify-content: center;
@@ -463,7 +464,7 @@
     display: none;
   }
 
-  /* Hero banner: stack vertically, hide image, add background */
+  /* Hero banner section */
   .element .frame-wrapper {
     padding: 0px 16px;
     background-color: var(--color-primary);
@@ -489,8 +490,8 @@
   }
 
   .element .hier-kunt-je-de {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   /* Hide the hero image on mobile */

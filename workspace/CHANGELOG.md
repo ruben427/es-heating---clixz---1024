@@ -18,6 +18,26 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 </instructions>
 
 <changelog>
+## 2026-06-02
+- Renamed class `SVG-phone-icon` → `chevron-bullit` in all files
+- Affected: `index.html` (3×), `offerte.html` (3×), `index-standalone.html` (3× HTML + 1× CSS), `style.css` (1×), `offerte.css` (1×)
+
+## 2026-06-01 (session 4)
+- Desktop `.img` (index) en `.hero-banner` (offerte): `width: 100%`, geen margin/padding — volledige breedte, geen downscale
+- Mobile `.img` + `.hero-banner`: `width: calc(100% - 32px)`, `margin: 0 16px` — alleen breakpoint <768px krijgt 16px padding
+
+## 2026-06-01 (session 3)
+- `.img` (movie header) op desktop: `width: calc(100% - 32px)`, `margin: 0 16px`, `max-width: none` — geen downscale, geen max-width, alleen 16px padding links/rechts
+- Mobile `.img` ook bijgewerkt: fixed 768px verwijderd, nu ook `calc(100% - 32px)` + `margin: 0 16px`
+
+## 2026-06-01 (session 2)
+- Offerte mobile (<768px): `col-main` en `col-sidebar` beide `width: 100%`
+
+## 2026-06-01
+- Alle `border-radius: 48px` → `32px` in `style.css`, `offerte.css` (sidebar, download-card)
+- Alle `font-size: 18px` → `16px` met `line-height: 24px` in `style.css`, `components/tile.css`, `offerte.css`
+- Offerte content-inner kolommen: `col-main` → `flex: 0 0 60%`, `col-sidebar` → `flex: 0 0 calc(40% - 48px)`
+
 ## 2026-05-31 (session 16)
 - Alle tile-gerelateerde CSS (`.tile`, `.tile-2`, `.layer-wrapper`, `.tiles-wrapper`, `.tiles-grid`, `.tiles`, `.tiles-feedback`, badge/button/content classes) verplaatst van `style.css` naar `components/tile.css`
 - Bijbehorende desktop + mobile media-query blokken ook verwijderd uit `style.css`

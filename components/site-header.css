@@ -1,0 +1,84 @@
+/* ══════════════════════════════════════════════════
+   SiteHeader — Reusable logo header component
+   components/site-header.css
+   ══════════════════════════════════════════════════
+
+   Replaces the hero-banner image strip.
+   Full 100% width outer wrapper, max-width 1200px
+   inner container, with left brand logo and right
+   company/partner logo.
+
+   Usage:
+     <link rel="stylesheet" href="components/site-header.css" />
+     Then paste the snippet from components/site-header.html.
+   ══════════════════════════════════════════════════ */
+
+/* ── Outer wrapper — 100% width, white background ── */
+.sh-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e8ebed;
+}
+
+/* ── Inner container — max-width 1200px, horizontal layout ── */
+.sh-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px 24px;
+  gap: 24px;
+}
+
+/* ── Left: brand / site logo ── */
+.sh-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.sh-logo img,
+.sh-logo svg {
+  display: block;
+  height: 48px;
+  width: auto;
+}
+
+/* ── Right: company / partner logo ── */
+.sh-company {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.sh-company img,
+.sh-company svg {
+  display: block;
+  height: 48px;
+  width: auto;
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .sh-inner {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .sh-logo img,
+  .sh-logo svg {
+    height: 36px;
+  }
+
+  .sh-company img,
+  .sh-company svg {
+    height: 36px;
+  }
+}

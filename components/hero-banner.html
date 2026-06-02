@@ -1,0 +1,206 @@
+<!--
+  HeroBanner — Reusable hero banner component
+  ============================================
+  The full-width branded image strip that sits directly below the main-header.
+
+  Usage:
+    Copy this snippet into any page that needs the hero banner header section.
+    The component picks up CSS from components/hero-banner.css.
+
+  Customisation:
+    • Replace the src with a different SVG/image if needed.
+    • The .hb-banner class controls all layout and responsive sizing.
+
+  Responsive:
+    Desktop  — full natural height of the SVG image
+    Mobile (≤768px) — 70% of the desktop height via the .hb-banner--mobile modifier
+-->
+<div class="hb-wrapper">
+  <img
+    class="hb-banner"
+    src="https://c.animaapp.com/mpvp5631rQrJOz/img/secondary-header.svg"
+    alt=""
+    role="presentation"
+  />
+</div>
+</invoke>
+
+<boltAction type="file" filePath="components/hero-banner.css" operation="write_to_file">
+/* ══════════════════════════════════════════════════
+   HeroBanner — Reusable hero banner component
+   components/hero-banner.css
+   ══════════════════════════════════════════════════
+
+   Sits directly below .main-header.
+   Full-width on desktop; scales to 70 % height on mobile.
+   ══════════════════════════════════════════════════ */
+
+/* ── Outer wrapper ── */
+.hb-wrapper {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  overflow: hidden;          /* prevents SVG overflow on small viewports */
+  line-height: 0;            /* removes inline-block gap below <img> */
+}
+
+/* ── Banner image ── */
+.hb-banner {
+  display: block;
+  width: 100%;
+  height: auto;              /* natural aspect ratio on desktop */
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* ── Mobile: 70 % of desktop height ── */
+@media (max-width: 768px) {
+  .hb-wrapper {
+    /* Scale the wrapper down to 70 % so the image is proportionally shorter */
+    max-height: 70%;
+  }
+
+  .hb-banner {
+    /* Force the image height to 70 % of its natural rendered height.
+       We achieve this by letting the wrapper clip and shrinking via
+       object-fit + a fixed vw-based height that equals ~70% of
+       the natural aspect ratio. The SVG is roughly 6 : 1 (w:h),
+       so natural height ≈ 100vw / 6 ≈ 16.67vw. 70 % = ~11.67vw */
+    height: 11.67vw;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+</invoke>
+
+<boltAction type="file" filePath="index.html" operation="replace_in_file">
+------- SEARCH
+    <link
+      rel="stylesheet"
+      href="https://ruben427.github.io/es-heating---clixz---1024/components/feedback-widget.css"
+    />
+    <link
+      href="https://ruben427.github.io/es-heating---clixz---1024/components/tile.css"
+      rel="stylesheet"
+    />
+=======
+    <link
+      rel="stylesheet"
+      href="https://ruben427.github.io/es-heating---clixz---1024/components/feedback-widget.css"
+    />
+    <link
+      href="https://ruben427.github.io/es-heating---clixz---1024/components/tile.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="components/hero-banner.css" />
++++++++ REPLACE
+
+------- SEARCH
+        <img
+          class="img"
+          src="https://c.animaapp.com/n495pQ6l/img/frame-48096118.svg"
+        />
+=======
+        <!-- HeroBanner component -->
+        <div class="hb-wrapper">
+          <img
+            class="hb-banner"
+            src="https://c.animaapp.com/mpvp5631rQrJOz/img/secondary-header.svg"
+            alt=""
+            role="presentation"
+          />
+        </div>
++++++++ REPLACE
+</invoke>
+
+<boltAction type="file" filePath="offerte.html" operation="replace_in_file">
+------- SEARCH
+    <link rel="stylesheet" href="offerte.css" />
+=======
+    <link rel="stylesheet" href="offerte.css" />
+    <link rel="stylesheet" href="components/hero-banner.css" />
++++++++ REPLACE
+
+------- SEARCH
+      <!-- ── Hero banner ── -->
+      <img
+        class="hero-banner"
+        src="https://c.animaapp.com/n495pQ6l/img/frame-48096118.svg"
+        alt=""
+      />
+=======
+      <!-- HeroBanner component -->
+      <div class="hb-wrapper">
+        <img
+          class="hb-banner"
+          src="https://c.animaapp.com/mpvp5631rQrJOz/img/secondary-header.svg"
+          alt=""
+          role="presentation"
+        />
+      </div>
++++++++ REPLACE
+</invoke>
+
+<!-- Remove the offerte.css hero-banner override since the component CSS now handles it -->
+<boltAction type="file" filePath="offerte.css" operation="replace_in_file">
+------- SEARCH
+.offerte-page .hero-banner {
+  position: relative;
+  width: 100%;
+  display: block;
+  flex: 0 0 auto;
+}
+=======
+/* hero-banner styles moved to components/hero-banner.css */
++++++++ REPLACE
+
+------- SEARCH
+  /* Header image: fluid on mobile, 16px padding each side */
+  .offerte-page .hero-banner {
+    width: calc(100% - 32px);
+    margin: 0 16px;
+    display: block;
+  }
+
+  /* Clip the fixed-width banner without showing a scrollbar */
+  .offerte-page {
+    overflow-x: hidden;
+  }
+=======
+  /* Clip the fixed-width banner without showing a scrollbar */
+  .offerte-page {
+    overflow-x: hidden;
+  }
++++++++ REPLACE
+</invoke>
+
+<!-- Remove the old .element .img override from style.css since it's replaced by the component -->
+<boltAction type="file" filePath="style.css" operation="replace_in_file">
+------- SEARCH
+.element .img {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  flex: 0 0 auto;
+  display: block;
+}
+=======
+/* .element .img replaced by HeroBanner component — see components/hero-banner.css */
++++++++ REPLACE
+
+------- SEARCH
+  /* Header image: fluid on mobile, 16px padding each side */
+  .element .img {
+    width: calc(100% - 32px);
+    min-width: unset;
+    margin: 0 16px;
+    display: block;
+  }
+
+=======
++++++++ REPLACE
+</invoke>
+
+<!-- Delete the imported reference folder -->
+<boltAction type="file" filePath="imported/index.html" operation="delete_file">

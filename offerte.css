@@ -1,0 +1,554 @@
+/* ══════════════════════════════════════
+   Offerte Detail Page Styles
+   offerte.css
+   ══════════════════════════════════════ */
+
+/* ── Root / page ── */
+.offerte-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ── Main header (reuse from main page) ── */
+.offerte-page .main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 16px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: var(--color-primary);
+}
+
+.offerte-page .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.offerte-page .div {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 4.25px;
+  padding: 9.5px 20px 10px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.offerte-page .link-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.offerte-page .chevron-bullit {
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+
+.offerte-page .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Lato", Helvetica;
+  font-weight: 700;
+  color: var(--core-color-on-primary);
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.offerte-page .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: var(--core-color-on-primary);
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.offerte-page .container-2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 9.5px 20px 1.5px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+/* .offerte-page .hero-banner — replaced by SiteHeader component (components/site-header.css) */
+
+/* ── Back nav bar ── */
+.offerte-page .back-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 24px;
+  align-self: stretch;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e3e5;
+}
+
+.offerte-page .back-nav__inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.offerte-page .back-btn {
+  display: inline-flex;
+  height: 44px;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: opacity 0.15s ease;
+}
+
+.offerte-page .back-btn:hover {
+  opacity: 0.75;
+}
+
+.offerte-page .back-btn__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.offerte-page .back-btn__text {
+  font-family: "Lato", Helvetica;
+  font-weight: 600;
+  color: var(--color-cta);
+  font-size: 16px;
+  letter-spacing: 0.36px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+/* ── Main content area ── */
+.offerte-page .content-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 32px 24px 64px;
+  align-self: stretch;
+  width: 100%;
+}
+
+.offerte-page .content-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ── Left column ── */
+.offerte-page .col-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 56px;
+  width: 60%;
+  min-width: 0;
+  padding-bottom: 48px;
+}
+
+/* ── Quote header block ── */
+.offerte-page .quote-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  width: 100%;
+}
+
+.offerte-page .quote-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  width: 100%;
+}
+
+.offerte-page .quote-kind {
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.offerte-page .quote-title {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  font-family: "Lato", Helvetica;
+  font-weight: 700;
+  color: #0c0d0e;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 38.4px;
+}
+
+.offerte-page .quote-version {
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #585858;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 16.8px;
+  white-space: nowrap;
+}
+
+/* ── Offerte regel (product rows) ── */
+.offerte-page .offerte-sectie {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  width: 100%;
+}
+
+.offerte-page .offerte-regel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 0px 24px;
+  align-self: stretch;
+  width: 100%;
+}
+
+.offerte-page .row-product {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  width: 100%;
+}
+
+.offerte-page .col-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.offerte-page .col-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+  width: 185px;
+  align-self: stretch;
+}
+
+.offerte-page .field-header {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+}
+
+.offerte-page .field-label-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0px 8px 0px 0px;
+  flex: 0 0 auto;
+  background-color: #ffffff;
+}
+
+.offerte-page .field-label {
+  font-family: "Lato", Helvetica;
+  font-weight: 700;
+  color: #00aaca;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.offerte-page .field-divider {
+  flex: 1;
+  height: 1px;
+  background-color: #00aaca;
+  opacity: 0.3;
+}
+
+.offerte-page .field-value {
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.offerte-page .field-value-price {
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: 24px;
+  align-self: stretch;
+}
+
+/* ── Totaal outline box ── */
+.offerte-page .totaal-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 24px;
+  align-self: stretch;
+  width: 100%;
+  border: 1px solid #00aaca;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.offerte-page .totaal-row {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  align-self: stretch;
+  width: 100%;
+}
+
+.offerte-page .totaal-label {
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  flex: 1;
+}
+
+.offerte-page .totaal-price {
+  font-family: "Lato", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 16px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: 24px;
+  width: 185px;
+}
+
+/* ── "Goed om te weten" section ── */
+.offerte-page .goed-om-te-weten {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  width: 100%;
+  padding-bottom: 48px;
+}
+
+.offerte-page .gotw-title {
+  font-family: "Lato", Helvetica;
+  font-weight: 700;
+  color: #0c0d0e;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.offerte-page .gotw-body {
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  align-self: stretch;
+}
+
+/* ── Right column: Bijlages sidebar ── */
+.offerte-page .col-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 48px 24px;
+  width: 40%;
+  flex-shrink: 0;
+  background-color: #ffe5cc;
+  border-radius: 32px 32px 32px 0px;
+  opacity: 0.94;
+}
+
+.offerte-page .sidebar-title {
+  font-family: "Lato", Helvetica;
+  font-weight: 700;
+  color: #0c0d0e;
+  font-size: 21px;
+  letter-spacing: 0;
+  line-height: 25.2px;
+  white-space: nowrap;
+}
+
+.offerte-page .sidebar-subtitle {
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  align-self: stretch;
+}
+
+/* ── Download card ── */
+.offerte-page .download-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 24px;
+  align-self: stretch;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 24px 24px 24px 0px;
+}
+
+.offerte-page .download-card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+  align-self: stretch;
+  width: 100%;
+}
+
+.offerte-page .download-card__title {
+  font-family: "Lato", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 21px;
+  letter-spacing: 0.18px;
+  line-height: 24px;
+  align-self: stretch;
+}
+
+.offerte-page .download-card__meta {
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0.18px;
+  line-height: 24px;
+  flex: 1;
+}
+
+.offerte-page .download-card__link {
+  font-family: "Lato", Helvetica;
+  font-weight: 700;
+  color: #dd006d;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-decoration: underline;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.offerte-page .download-card__link:hover {
+  opacity: 0.8;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  /* Clip the fixed-width banner without showing a scrollbar */
+  .offerte-page {
+    overflow-x: hidden;
+  }
+
+  .offerte-page .container-2 {
+    display: none;
+  }
+
+  .offerte-page .content-inner {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .offerte-page .col-main {
+    width: 100%;
+  }
+
+  .offerte-page .col-sidebar {
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  .offerte-page .row-product {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .offerte-page .col-price {
+    width: 100%;
+  }
+
+  .offerte-page .field-value-price {
+    text-align: left;
+  }
+
+  .offerte-page .totaal-row {
+    gap: 16px;
+  }
+
+  .offerte-page .totaal-price {
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .offerte-page .quote-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .offerte-page .back-nav {
+    padding: 12px 16px;
+  }
+}

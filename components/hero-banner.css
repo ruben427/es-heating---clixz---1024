@@ -1,0 +1,107 @@
+/* ══════════════════════════════════════════════════
+   HeroBanner — Reusable notification hero banner
+   components/hero-banner.css
+   ══════════════════════════════════════════════════
+
+   A full-width warm-orange banner that sits directly
+   below the main-header, displaying a primary message
+   to the visitor.
+
+   Usage:
+     <link rel="stylesheet" href="components/hero-banner.css" />
+     Then paste the snippet from components/hero-banner.html.
+
+   Customise:
+     • Change --hb-bg to adjust the background colour.
+     • Edit the .hb-text content for a different message.
+   ══════════════════════════════════════════════════ */
+
+:root {
+  --hb-bg: #ffe6c1; /* warm orange — from Figma reference */
+  --hb-color: #000000;
+  --hb-font: "Inter", "Lato", Helvetica, sans-serif;
+  --hb-size: 14px;
+  --hb-lh: 1.5;
+  --hb-pad-v: 20px;
+  --hb-pad-h: 24px;
+  --hb-gap: 12px;
+}
+
+/* ── Outer wrapper — stretches edge-to-edge ── */
+.hb-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: var(--hb-bg);
+  padding: var(--hb-pad-v) var(--hb-pad-h);
+  gap: var(--hb-gap);
+}
+
+/* ── Inner frame — max-width container ── */
+.hb-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: var(--hb-gap);
+}
+
+/* ── Icon slot (optional) ── */
+.hb-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Message text ── */
+.hb-text {
+  font-family: var(--hb-font);
+  font-weight: 400;
+  color: var(--hb-color);
+  font-size: var(--hb-size);
+  letter-spacing: 0;
+  line-height: var(--hb-lh);
+  text-align: center;
+  margin: 0;
+}
+
+/* ── Optional CTA link inside the banner ── */
+.hb-link {
+  font-family: var(--hb-font);
+  font-weight: 700;
+  color: var(--hb-color);
+  font-size: var(--hb-size);
+  text-decoration: underline;
+  white-space: nowrap;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.hb-link:hover {
+  opacity: 0.75;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .hb-wrapper {
+    padding: 16px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hb-frame {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hb-text {
+    font-size: 13px;
+  }
+}

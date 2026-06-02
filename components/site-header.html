@@ -1,0 +1,33 @@
+<!--
+  SiteHeader — Reusable logo header component
+  ============================================
+  Replaces the hero-banner image.
+  Full 100% width, inner content capped at 1200px.
+  Contains two SVG logos: brand logo (left) and company logo (right).
+
+  Usage:
+    1. Add to <head>:
+         <link rel="stylesheet" href="components/site-header.css" />
+    2. Paste this snippet where the hero banner was.
+
+  Customise:
+    • Replace src paths with your own logo files.
+    • The .sh-logo and .sh-company slots accept any <img> or inline <svg>.
+    • Wrap either slot in an <a href="..."> to make logos clickable.
+-->
+<div class="sh-wrapper">
+  <div class="sh-inner">
+    <!-- Left: brand / site logo -->
+    <a
+      class="sh-logo"
+      href="https://www.energiewacht.nl"
+      aria-label="Energiewacht — home"
+    >
+      <img src="img/logo_energiewacht.svg" alt="Energiewacht" />
+    </a>
+    <!-- Right: company / partner logo -->
+    <div class="sh-company">
+      <img src="img/samen_met_essent.svg" alt="Samen met Essent" />
+    </div>
+  </div>
+</div>

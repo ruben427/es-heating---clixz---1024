@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 48" fill="none" role="img" aria-label="ES Heating logo">
+  <!-- Flame / heating icon -->
+  <g>
+    <path d="M24 6 C18 14 14 18 16 26 C17 30 20 33 24 34 C20 30 21 25 24 20 C27 25 28 30 24 34 C28 33 31 30 32 26 C34 18 30 14 24 6Z" fill="#008080"/>
+    <path d="M24 22 C22 25 22 28 24 30 C26 28 26 25 24 22Z" fill="#ffffff" opacity="0.9"/>
+  </g>
+  <!-- Wordmark: ES -->
+  <text x="42" y="22" font-family="Lato, Helvetica, Arial, sans-serif" font-weight="700" font-size="18" fill="#008080" letter-spacing="0.5">ES</text>
+  <!-- Wordmark: Heating -->
+  <text x="42" y="38" font-family="Lato, Helvetica, Arial, sans-serif" font-weight="400" font-size="13" fill="#303030" letter-spacing="1.2">HEATING</text>
+  <!-- Vertical divider -->
+  <line x1="106" y1="10" x2="106" y2="38" stroke="#d6d9db" stroke-width="1"/>
+  <!-- Tagline -->
+  <text x="114" y="26" font-family="Lato, Helvetica, Arial, sans-serif" font-weight="400" font-size="10" fill="#585858" letter-spacing="0.3">Erkend &amp; gecertificeerd</text>
+</svg>
