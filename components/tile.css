@@ -129,6 +129,7 @@
   box-shadow: 0px 4px 0px #d6d9db;
   border-radius: 4px;
   width: 100%;
+  margin-bottom: 12px;
 }
 
 /* ── Left: badge + title + subtitle ── */
