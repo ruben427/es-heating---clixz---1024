@@ -18,6 +18,13 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 </instructions>
 
 <changelog>
+## 2026-06-03 (session 20)
+- `components/offerte-sheet.css`: new CSS file created — all classes from `offerte-sheet.html` scoped without `.offerte-page` parent; mirrors values from `offerte.css`
+- `components/offerte-sheet.html`: linked `offerte-sheet.css` via `<link>` tag at top
+
+## 2026-06-03 (session 19)
+- `components/offerte-sheet.html`: new component created — full offerte sheet (quote header, product rows, totaal box, bijlages sidebar, jouw gegevens) with `#Placeholder#` tokens, links `offerte.css`
+
 ## 2026-06-03 (session 18)
 - `components/tile.css`: `.tile__right` now has `gap: 8px` between button and version text
 

@@ -1,0 +1,333 @@
+/* ══════════════════════════════════════
+   Offerte Sheet Component Styles
+   components/offerte-sheet.css
+   ══════════════════════════════════════ */
+
+/* ── Layout wrapper ── */
+.col-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 56px;
+  width: 100%;
+  min-width: 0;
+  padding-bottom: 48px;
+}
+
+/* ── Quote header block ── */
+.quote-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  width: 100%;
+}
+
+.quote-header__top {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.quote-intro-text {
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  align-self: stretch;
+  margin: 0;
+}
+
+.quote-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  width: 100%;
+}
+
+.quote-title {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  font-family: "Lato", Helvetica;
+  font-weight: 700;
+  color: #0c0d0e;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 38.4px;
+}
+
+.quote-datum {
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 21.6px;
+  margin: 0;
+}
+
+.quote-datum__date {
+  color: #000000;
+}
+
+.quote-datum__version {
+  color: #6b737b;
+}
+
+/* ── Back / atom button ── */
+.atom-button {
+  display: inline-flex;
+  height: 56px;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.atom-button__icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.atom-button__text {
+  font-family: "Lato", Helvetica;
+  font-weight: 600;
+  color: #b80153;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.atom-button:hover .atom-button__text {
+  text-decoration: underline;
+}
+
+/* ── Offerte sectie (product rows container) ── */
+.offerte-sectie {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  width: 100%;
+}
+
+/* ── Single product row ── */
+.offerte-regel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 24px 12px;
+  align-self: stretch;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.row-product {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  align-self: stretch;
+  width: 100%;
+}
+
+/* ── Description column (70%) ── */
+.col-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+  flex: 0 0 70%;
+  width: 70%;
+  min-width: 0;
+}
+
+/* ── Price column (30%) ── */
+.col-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 11px;
+  flex: 0 0 30%;
+  width: 30%;
+  min-width: 100px;
+  padding-left: 12px;
+  align-self: stretch;
+}
+
+/* ── Field header (label + divider line) ── */
+.field-header {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+}
+
+.field-label-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 8px 0 0;
+  flex: 0 0 auto;
+  background-color: #ffffff;
+}
+
+.field-label {
+  font-family: "Lato", Helvetica;
+  font-weight: 700;
+  color: #00aaca;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.field-divider {
+  flex: 1;
+  height: 1px;
+  background-color: #00aaca;
+  opacity: 0.3;
+}
+
+/* ── Field values ── */
+.field-value {
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.field-value-price {
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: 24px;
+  align-self: stretch;
+}
+
+/* ── Totaal outline box ── */
+.totaal-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 24px 12px;
+  align-self: stretch;
+  width: 100%;
+  border: 1px solid #00aaca;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.totaal-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  align-self: stretch;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.totaal-label {
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  flex: 0 0 70%;
+  width: 70%;
+  min-width: 0;
+}
+
+.totaal-price {
+  font-family: "Lato", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 16px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: 24px;
+  flex: 0 0 30%;
+  width: 30%;
+  min-width: 100px;
+  padding-left: 12px;
+  box-sizing: border-box;
+}
+
+/* ── Goed om te weten section ── */
+.goed-om-te-weten {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  width: 100%;
+  padding-bottom: 48px;
+}
+
+.gotw-title {
+  font-family: "Lato", Helvetica;
+  font-weight: 700;
+  color: #0c0d0e;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.gotw-body {
+  font-family: "Lato", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  align-self: stretch;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .quote-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .offerte-regel {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .field-value-price {
+    text-align: right;
+  }
+
+  .totaal-row {
+    gap: 0;
+  }
+
+  .totaal-price {
+    flex: 0 0 30%;
+    width: 30%;
+    min-width: 100px;
+    flex-shrink: 0;
+  }
+}
