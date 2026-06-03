@@ -18,6 +18,21 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 </instructions>
 
 <changelog>
+## 2026-06-03 (session 18)
+- `components/tile.css`: `.tile__right` now has `gap: 8px` between button and version text
+
+## 2026-06-03 (session 17)
+- `components/tile.css`: `.tile__right` fixed at `200px`; `.tile__left` `flex: 1 1 auto`; gap `24px` desktop / `12px` mobile
+- `@media (max-width: 479px)`: tile stacks vertically, `tile__right` full width, button fills, version text centered
+
+## 2026-06-02 (session 16)
+- `components/tile.css`: `.tile__left` changed from `flex: 1 1 0` → `flex: 1 1 auto` so it grows to max available width while `.tile__right` stays fixed at 120px
+
+## 2026-06-02 (session 15)
+- `components/tile.html`: `.tile__top` → `.tile__left`, `.tile__bottom` → `.tile__right` — vertical split layout
+- `components/tile.css`: `.tile` now `flex-direction: row`; `.tile__left` takes remaining space; `.tile__right` is `flex: 0 0 120px; max-width: 120px; justify-content: flex-end` (bottom aligned)
+- Button padding reduced to `0 8px` to fit 120px column; version text wraps with `word-break: break-word`
+
 ## 2026-06-02 (session 14)
 - `index.html` + `index-standalone.html`: replaced all `<table>/<tr>/<td>` wrappers inside `.tiles` with plain `<div class="tile">` — tables were causing implicit grid layout
 - `components/tile.css`: removed table-reset rules (`.tiles table`, `.tiles table tbody/tr/td`) — no longer needed
