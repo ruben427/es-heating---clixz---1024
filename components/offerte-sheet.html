@@ -1,126 +1,110 @@
-<link
-  rel="stylesheet"
-  href="https://ruben427.github.io/es-heating---clixz---1024/components/offerte-sheet.css"
-/>
-<table border="0" cellpadding="1" cellspacing="1" class="BodyTable">
-  <tbody>
-    <tr>
-      <td>
-        <div class="col-main">
-          <!-- Quote header -->
-          <div class="quote-header">
-            <div class="quote-header__top">
-              <p>
-                <a class="atom-button" href="index.html">
-                  <img
-                    class="atom-button__icon"
-                    src="https://c.animaapp.com/mpwog1i9v9lJ2w/img/icon-left.svg"
-                    alt=""
-                  />
-                  <span class="atom-button__text"
-                    >terug naar het overzicht</span
-                  >
-                </a>
-              </p>
-              <p class="quote-intro-text">
-                Deze offertelink heeft een maximale duur van 1 maand. Aan de
-                rechterkant kunt u alle benodigde documenten downloaden voor uw
-                eigen administratie.
-              </p>
-            </div>
-            <div class="quote-meta">
-              <div class="quote-title">Je persoonlijke koop offerte</div>
-              <p class="quote-datum">
-                <span class="quote-datum__date">Datum: 28-05-2026 -</span
-                ><span class="quote-datum__version">
-                  versie 1.0.0 - 5 mei 2026</span
-                >
-              </p>
-            </div>
-          </div>
+    <!DOCTYPE html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta charset="utf-8" />
+            <link rel="stylesheet" href="https://ruben427.github.io/es-heating---clixz---1024/components/offerte-sheet.css" />
+        </head>
+        <body>
+            <table border="0" cellpadding="1" cellspacing="1" class="BodyTable">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="col-main">
+                        <!-- Quote header -->
+                        <div class="quote-header">
+                        <div class="quote-header__top">
+                            <p>
+                            <a class="atom-button" href="index.html">
+                                <img
+                                class="atom-button__icon"
+                                src="https://c.animaapp.com/mpwog1i9v9lJ2w/img/icon-left.svg"
+                                alt=""
+                                />
+                                <span class="atom-button__text"
+                                >terug naar het overzicht</span
+                                >
+                            </a>
+                            </p>
+                            <p class="quote-intro-text">
+                            Deze offertelink heeft een maximale duur van 1 maand. Aan de
+                            rechterkant kunt u alle benodigde documenten downloaden voor
+                            uw eigen administratie.
+                            </p>
+                        </div>
+                        <div class="quote-meta">
+                            <div class="quote-title">Je persoonlijke koop offerte</div>
+                            <p class="quote-datum">
+                            <span class="quote-datum__date">Datum: #Int_HK.Quotedateconvert# - </span
+                            ><span class="quote-datum__version">
+                                #Int_HK.Offerteversie#</span
+                            >
+                            </p>
+                        </div>
+                        </div>
+                        <div>
+                            <table class="offerte-sectie" border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="offerte-regel">
+                                                <div class="row-product">
+                                                <!-- Product type column -->
+                                                <div class="col-description">
+                                                    <div class="field-header">
+                                                    <div class="field-label-wrap">
+                                                        <span class="field-label">Product type</span>
+                                                    </div>
+                                                    <div class="field-divider"></div>
+                                                    </div>
+                                                    <div class="field-value">
+                                                    #Int_HK.EquipmentTypeName# - #Int_HK.EquipmentDescription#
+                                                    </div>
+                                                </div>
+                                                <!-- Price column -->
+                                                <div class="col-price">
+                                                    <div class="field-header">
+                                                    <div class="field-label-wrap">
+                                                        <span class="field-label">Prijs</span>
+                                                    </div>
+                                                    <div class="field-divider"></div>
+                                                    </div>
+                                                    <div class="field-value-price">#Int_HK.Huurprijs#</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        
 
-          <!-- Product rows -->
-          <div class="offerte-sectie">
-            <!-- Product row 1 -->
-            <div class="offerte-regel">
-              <div class="row-product">
-                <!-- Product type column -->
-                <div class="col-description">
-                  <div class="field-header">
-                    <div class="field-label-wrap">
-                      <span class="field-label">Product type</span>
-                    </div>
-                    <div class="field-divider"></div>
-                  </div>
-                  <div class="field-value">
-                    CV/combi - Remeha Tzerra Ace Matic CW5 CCS 60/100
-                  </div>
-                </div>
-                <!-- Price column -->
-                <div class="col-price">
-                  <div class="field-header">
-                    <div class="field-label-wrap">
-                      <span class="field-label">Prijs</span>
-                    </div>
-                    <div class="field-divider"></div>
-                  </div>
-                  <div class="field-value-price">&euro; 3.089,77</div>
-                </div>
-              </div>
-            </div>
+                            [HasThermostaatBolean]#Int_HK.Int_thermostaat#[/HasThermostaatBolean]
+                            [HasMeerwerkBolean]#Int_HK.Int_MeerwerkHuur#[/HasMeerwerkBolean]
+                            [HasKortingenBolean]#Int_HK.Int_Kortingen#[/HasKortingenBolean]
+                            </div>
+                        <!-- Totaal box -->
+                            <div class="totaal-box">
+                                <div class="totaal-row">
+                                    <div class="totaal-label">
+                                        Eenmalige factuur (incl. btw):
+                                    </div>
+                                    <div class="totaal-price">
+                                        #Int_HK.EenmaligHuur#
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goed-om-te-weten">
+                                <div class="gotw-title">
+                                    Goed om te weten
+                                </div>
+                                <div class="gotw-body">
+                                    #Int_HK.OpmerkingenKlant#
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
-            <!-- Product row 2 -->
-            <div class="offerte-regel">
-              <div class="row-product">
-                <div class="col-description">
-                  <div class="field-header">
-                    <div class="field-label-wrap">
-                      <span class="field-label">Product type</span>
-                    </div>
-                    <div class="field-divider"></div>
-                  </div>
-                  <div class="field-value">
-                    CV/combi - Remeha Tzerra Ace Matic CW5 CCS 60/100
-                  </div>
-                </div>
-                <div class="col-price">
-                  <div class="field-header">
-                    <div class="field-label-wrap">
-                      <span class="field-label">Prijs</span>
-                    </div>
-                    <div class="field-divider"></div>
-                  </div>
-                  <div class="field-value-price">&euro; 3.089,77</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Totaal box -->
-            <div class="totaal-box">
-              <div class="totaal-row">
-                <div class="totaal-label">
-                  Totaalbedrag inclusief installatie
-                </div>
-                <div class="totaal-price">&euro; 2789,77</div>
-              </div>
-            </div>
-          </div>
-          <!-- /offerte-sectie -->
-
-          <!-- Goed om te weten -->
-          <div class="goed-om-te-weten">
-            <div class="gotw-title">Goed om te weten</div>
-            <div class="gotw-body">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
-              tation ullam corper suscipit lobortis nisl ut aliquip ex ea
-              commodo consequat.
-            </div>
-          </div>
-          <!-- Jouw gegevens -->
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
+        </body>
+    </html>
+    
