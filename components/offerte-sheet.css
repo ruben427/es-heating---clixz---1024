@@ -137,33 +137,64 @@
 
 .row-product {
   display: flex;
+  flex-direction: row-reverse; /* col-right first in DOM → renders right */
   align-items: flex-start;
   gap: 0;
   align-self: stretch;
   width: 100%;
 }
 
-/* ── Description column (70%) ── */
+/* ── Left column: description — grows to fill remaining space ── */
+.col-left {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Right column: holds qty and/or price at fixed 120px each ── */
+.col-right {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0;
+}
+
+/* ── Description column (fills col-left) ── */
 .col-description {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 11px;
-  flex: 0 0 70%;
-  width: 70%;
+  width: 100%;
   min-width: 0;
 }
 
-/* ── Price column (30%) ── */
+/* ── Quantity column — fixed 120px ── */
+.col-qty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 11px;
+  flex: 0 0 120px;
+  width: 120px;
+  padding-left: 12px;
+  box-sizing: border-box;
+  align-self: stretch;
+}
+
+/* ── Price column — fixed 120px ── */
 .col-price {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 11px;
-  flex: 0 0 30%;
-  width: 30%;
-  min-width: 100px;
+  flex: 0 0 120px;
+  width: 120px;
   padding-left: 12px;
+  box-sizing: border-box;
   align-self: stretch;
 }
 

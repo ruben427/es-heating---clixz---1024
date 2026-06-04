@@ -18,6 +18,12 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 </instructions>
 
 <changelog>
+## 2026-06-04 (session 21)
+- `components/offerte-sheet.html`: 2 offerte-secties toegevoegd — `offerte-sectie--no-qty` (zonder aantal) en `offerte-sectie--with-qty` (met aantal-kolom)
+- `.row-product` gebruikt `flex-direction: row-reverse` zodat `.col-right` DOM-first staat maar visueel rechts blijft
+- `.col-left` groeit (`flex: 1 1 auto`); `.col-right` bevat `.col-qty` en/of `.col-price` elk 120px vast
+- `components/offerte-sheet.css`: kolom-logica herschreven van `70%/30%` naar `col-left/col-right/col-qty/col-price`
+
 ## 2026-06-03 (session 20)
 - `components/offerte-sheet.css`: new CSS file created — all classes from `offerte-sheet.html` scoped without `.offerte-page` parent; mirrors values from `offerte.css`
 - `components/offerte-sheet.html`: linked `offerte-sheet.css` via `<link>` tag at top

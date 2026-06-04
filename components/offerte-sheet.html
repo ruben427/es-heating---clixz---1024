@@ -41,46 +41,88 @@
                             </p>
                         </div>
                         </div>
-                        <div>
-                            <table class="offerte-sectie" border="0" cellpadding="1" cellspacing="1" style="width:100%;">
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="offerte-regel">
-                                                <div class="row-product">
-                                                <!-- Product type column -->
-                                                <div class="col-description">
-                                                    <div class="field-header">
-                                                    <div class="field-label-wrap">
-                                                        <span class="field-label">Product type</span>
-                                                    </div>
-                                                    <div class="field-divider"></div>
-                                                    </div>
-                                                    <div class="field-value">
-                                                    #Int_HK.EquipmentTypeName# - #Int_HK.EquipmentDescription#
-                                                    </div>
+                        <!-- ══ SECTIE A: zonder aantal-kolom ══ -->
+                        <div class="offerte-sectie offerte-sectie--no-qty">
+                            <div class="offerte-regel">
+                                <div class="row-product">
+                                    <!-- Rechts: prijs (vaste breedte, geen aantal) -->
+                                    <div class="col-right">
+                                        <div class="col-price">
+                                            <div class="field-header">
+                                                <div class="field-label-wrap">
+                                                    <span class="field-label">Prijs</span>
                                                 </div>
-                                                <!-- Price column -->
-                                                <div class="col-price">
-                                                    <div class="field-header">
-                                                    <div class="field-label-wrap">
-                                                        <span class="field-label">Prijs</span>
-                                                    </div>
-                                                    <div class="field-divider"></div>
-                                                    </div>
-                                                    <div class="field-value-price">#Int_HK.Huurprijs#</div>
-                                                </div>
+                                                <div class="field-divider"></div>
                                             </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        
-
+                                            <div class="field-value-price">#Int_HK.Huurprijs#</div>
+                                        </div>
+                                    </div>
+                                    <!-- Links: omschrijving (groeit mee) -->
+                                    <div class="col-left">
+                                        <div class="col-description">
+                                            <div class="field-header">
+                                                <div class="field-label-wrap">
+                                                    <span class="field-label">Product type</span>
+                                                </div>
+                                                <div class="field-divider"></div>
+                                            </div>
+                                            <div class="field-value">
+                                                #Int_HK.EquipmentTypeName# - #Int_HK.EquipmentDescription#
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             [HasThermostaatBolean]#Int_HK.Int_thermostaat#[/HasThermostaatBolean]
                             [HasMeerwerkBolean]#Int_HK.Int_MeerwerkHuur#[/HasMeerwerkBolean]
                             [HasKortingenBolean]#Int_HK.Int_Kortingen#[/HasKortingenBolean]
+                        </div>
+
+                        <!-- ══ SECTIE B: met aantal-kolom ══ -->
+                        <div class="offerte-sectie offerte-sectie--with-qty">
+                            <div class="offerte-regel">
+                                <div class="row-product">
+                                    <!-- Rechts: aantal + prijs (elk 120px) -->
+                                    <div class="col-right">
+                                        <div class="col-qty">
+                                            <div class="field-header">
+                                                <div class="field-label-wrap">
+                                                    <span class="field-label">Aantal</span>
+                                                </div>
+                                                <div class="field-divider"></div>
+                                            </div>
+                                            <div class="field-value-price">#Int_HK.Aantal#</div>
+                                        </div>
+                                        <div class="col-price">
+                                            <div class="field-header">
+                                                <div class="field-label-wrap">
+                                                    <span class="field-label">Prijs</span>
+                                                </div>
+                                                <div class="field-divider"></div>
+                                            </div>
+                                            <div class="field-value-price">#Int_HK.Huurprijs#</div>
+                                        </div>
+                                    </div>
+                                    <!-- Links: omschrijving (groeit mee) -->
+                                    <div class="col-left">
+                                        <div class="col-description">
+                                            <div class="field-header">
+                                                <div class="field-label-wrap">
+                                                    <span class="field-label">Product type</span>
+                                                </div>
+                                                <div class="field-divider"></div>
+                                            </div>
+                                            <div class="field-value">
+                                                #Int_HK.EquipmentTypeName# - #Int_HK.EquipmentDescription#
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            [HasThermostaatBolean]#Int_HK.Int_thermostaat#[/HasThermostaatBolean]
+                            [HasMeerwerkBolean]#Int_HK.Int_MeerwerkHuur#[/HasMeerwerkBolean]
+                            [HasKortingenBolean]#Int_HK.Int_Kortingen#[/HasKortingenBolean]
+                        </div>
                         <!-- Totaal box -->
                             <div class="totaal-box">
                                 <div class="totaal-row">
