@@ -5,10 +5,7 @@
             <link rel="stylesheet" href="https://ruben427.github.io/es-heating---clixz---1024/components/offerte-sheet.css" />
         </head>
         <body>
-            <table border="0" cellpadding="1" cellspacing="1" class="BodyTable">
-                <tbody>
-                    <tr>
-                        <td>
+          
                             <div class="col-main">
                         <!-- Quote header -->
                         <div class="quote-header">
@@ -42,7 +39,11 @@
                         </div>
                         </div>
                         <!-- ══ SECTIE A: zonder aantal-kolom ══ -->
-                        <div class="offerte-sectie offerte-sectie--no-qty">
+                        <table>
+													<tr>
+														<td>
+															
+												<div class="offerte-sectie offerte-sectie--no-qty">
                             <div class="offerte-regel">
                                 <div class="row-product">
                                     <!-- Rechts: prijs (vaste breedte, geen aantal) -->
@@ -73,13 +74,14 @@
                                     </div>
                                 </div>
                             </div>
-                            [HasThermostaatBolean]#Int_HK.Int_thermostaat#[/HasThermostaatBolean]
-                            [HasMeerwerkBolean]#Int_HK.Int_MeerwerkHuur#[/HasMeerwerkBolean]
-                            [HasKortingenBolean]#Int_HK.Int_Kortingen#[/HasKortingenBolean]
-                        </div>
+                          </div>
 
+													
                         <!-- ══ SECTIE B: met aantal-kolom ══ -->
-                        <div class="offerte-sectie offerte-sectie--with-qty">
+                             <table>
+													<tr>
+														<td>
+															<div class="offerte-sectie offerte-sectie--with-qty">
                             <div class="offerte-regel">
                                 <div class="row-product">
                                     <!-- Rechts: aantal + prijs (elk 120px) -->
@@ -119,10 +121,12 @@
                                     </div>
                                 </div>
                             </div>
-                            [HasThermostaatBolean]#Int_HK.Int_thermostaat#[/HasThermostaatBolean]
-                            [HasMeerwerkBolean]#Int_HK.Int_MeerwerkHuur#[/HasMeerwerkBolean]
-                            [HasKortingenBolean]#Int_HK.Int_Kortingen#[/HasKortingenBolean]
+                            
                         </div>
+																</td>
+													</tr>
+												</table>
+															[HasThermostaatBolean]#Int_HK.Int_thermostaat#[/HasThermostaatBolean] [HasMeerwerkBolean]#Int_HK.Int_MeerwerkHuur#[/HasMeerwerkBolean] [HasKortingenBolean]#Int_HK.Int_Kortingen#[/HasKortingenBolean]
                         <!-- Totaal box -->
                             <div class="totaal-box">
                                 <div class="totaal-row">
@@ -142,11 +146,8 @@
                                     #Int_HK.OpmerkingenKlant#
                                 </div>
                             </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                     
 
         </body>
-    </html>
+
     

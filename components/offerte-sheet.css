@@ -204,6 +204,9 @@
   align-items: center;
   align-self: stretch;
   width: 100%;
+  height: 20px;
+  min-height: 20px;
+  max-height: 20px;
 }
 
 .field-label-wrap {
@@ -252,6 +255,10 @@
   letter-spacing: 0;
   line-height: 24px;
   align-self: stretch;
+}
+
+.col-qty .field-value-price {
+  text-align: left;
 }
 
 /* ── Totaal outline box ── */

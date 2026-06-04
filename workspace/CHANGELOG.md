@@ -18,6 +18,10 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 </instructions>
 
 <changelog>
+## 2026-06-04 (session 22)
+- `components/offerte-sheet.css`: `.field-header` vaste hoogte `20px` (height/min-height/max-height)
+- `components/offerte-sheet.css`: `.col-qty .field-value-price` overschrijft `text-align: right` → `text-align: left`
+
 ## 2026-06-04 (session 21)
 - `components/offerte-sheet.html`: 2 offerte-secties toegevoegd — `offerte-sectie--no-qty` (zonder aantal) en `offerte-sectie--with-qty` (met aantal-kolom)
 - `.row-product` gebruikt `flex-direction: row-reverse` zodat `.col-right` DOM-first staat maar visueel rechts blijft
