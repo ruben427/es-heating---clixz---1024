@@ -18,6 +18,10 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 </instructions>
 
 <changelog>
+## 2026-06-04 (session 24)
+- `components/offerte-sheet.css`: `@media (max-width: 600px)` — `.row-product` gewijzigd van `column` naar `column-reverse`
+- DOM-volgorde is col-right boven col-left; `column-reverse` keert dit om zodat col-left visueel bovenaan staat
+
 ## 2026-06-04 (session 23)
 - `components/offerte-sheet.css`: `@media (max-width: 600px)` — `.row-product` stacks vertically (`flex-direction: column`)
 - `.col-right` wordt `flex-direction: row; justify-content: space-between` → aantal links, prijs rechts

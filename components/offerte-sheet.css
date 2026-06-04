@@ -372,9 +372,9 @@
 }
 
 @media (max-width: 600px) {
-  /* Stack col-right BELOW col-left */
+  /* col-right staat eerst in de DOM → column-reverse zorgt dat col-left visueel bovenaan staat */
   .row-product {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   /* col-left fills full width */
