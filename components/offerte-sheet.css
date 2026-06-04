@@ -370,3 +370,46 @@
     flex-shrink: 0;
   }
 }
+
+@media (max-width: 600px) {
+  /* Stack col-right BELOW col-left */
+  .row-product {
+    flex-direction: column;
+  }
+
+  /* col-left fills full width */
+  .col-left {
+    width: 100%;
+  }
+
+  /* col-right becomes a horizontal row: aantal left, prijs right */
+  .col-right {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Both qty and price columns grow equally and reset fixed width */
+  .col-qty,
+  .col-price {
+    flex: 1 1 auto;
+    width: auto;
+    padding-left: 0;
+  }
+
+  /* Aantal (col-qty) left-aligned — already set globally, but confirm here */
+  .col-qty {
+    align-items: flex-start;
+  }
+
+  /* Prijs (col-price) right-aligned */
+  .col-price {
+    align-items: flex-end;
+  }
+
+  /* field-header divider still fills available space */
+  .col-qty .field-header,
+  .col-price .field-header {
+    width: 100%;
+  }
+}

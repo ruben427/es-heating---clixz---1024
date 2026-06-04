@@ -18,6 +18,11 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 </instructions>
 
 <changelog>
+## 2026-06-04 (session 23)
+- `components/offerte-sheet.css`: `@media (max-width: 600px)` — `.row-product` stacks vertically (`flex-direction: column`)
+- `.col-right` wordt `flex-direction: row; justify-content: space-between` → aantal links, prijs rechts
+- `.col-qty` align-items `flex-start`; `.col-price` align-items `flex-end`; beide `flex: 1 1 auto`, padding-left reset
+
 ## 2026-06-04 (session 22)
 - `components/offerte-sheet.css`: `.field-header` vaste hoogte `20px` (height/min-height/max-height)
 - `components/offerte-sheet.css`: `.col-qty .field-value-price` overschrijft `text-align: right` → `text-align: left`
