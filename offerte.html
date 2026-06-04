@@ -12,6 +12,8 @@
       rel="stylesheet"
       href="https://ruben427.github.io/es-heating---clixz---1024/styleguide.css"
     />
+    <link rel="stylesheet" href="components/offerte-sheet.css" />
+
     <link rel="stylesheet" href="offerte.css" />
     <link rel="stylesheet" href="components/site-header.css" />
     <link rel="stylesheet" href="components/sticky-footer.css" />
@@ -99,94 +101,117 @@
               <div class="quote-meta">
                 <div class="quote-title">Je persoonlijke koop offerte</div>
                 <p class="quote-datum">
-                  <span class="quote-datum__date">Datum: 28-05-2026 -</span
+                  <span class="quote-datum__date"
+                    >Datum: #Int_HK.Quotedateconvert# - </span
                   ><span class="quote-datum__version">
-                    versie 1.0.0 - 5 mei 2026</span
+                    #Int_HK.Offerteversie#</span
                   >
                 </p>
               </div>
             </div>
-
-            <!-- Product rows -->
-            <div class="offerte-sectie">
-              <!-- Product row 1 -->
-              <div class="offerte-regel">
-                <div class="row-product">
-                  <!-- Product type column -->
-                  <div class="col-description">
-                    <div class="field-header">
-                      <div class="field-label-wrap">
-                        <span class="field-label">Product type</span>
+            <!-- ══ SECTIE A: zonder aantal-kolom ══ -->
+            <table>
+              <tr>
+                <td>
+                  <div class="offerte-sectie offerte-sectie--no-qty">
+                    <div class="offerte-regel">
+                      <div class="row-product">
+                        <!-- Rechts: prijs (vaste breedte, geen aantal) -->
+                        <div class="col-right">
+                          <div class="col-price">
+                            <div class="field-header">
+                              <div class="field-label-wrap">
+                                <span class="field-label">Prijs</span>
+                              </div>
+                              <div class="field-divider"></div>
+                            </div>
+                            <div class="field-value-price">
+                              #Int_HK.Huurprijs#
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Links: omschrijving (groeit mee) -->
+                        <div class="col-left">
+                          <div class="col-description">
+                            <div class="field-header">
+                              <div class="field-label-wrap">
+                                <span class="field-label">Product type</span>
+                              </div>
+                              <div class="field-divider"></div>
+                            </div>
+                            <div class="field-value">
+                              #Int_HK.EquipmentTypeName# -
+                              #Int_HK.EquipmentDescription#
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="field-divider"></div>
-                    </div>
-                    <div class="field-value">
-                      CV/combi - Remeha Tzerra Ace Matic CW5 CCS 60/100
                     </div>
                   </div>
-                  <!-- Price column -->
-                  <div class="col-price">
-                    <div class="field-header">
-                      <div class="field-label-wrap">
-                        <span class="field-label">Prijs</span>
-                      </div>
-                      <div class="field-divider"></div>
-                    </div>
-                    <div class="field-value-price">&euro; 3.089,77</div>
-                  </div>
-                </div>
-              </div>
 
-              <!-- Product row 2 -->
-              <div class="offerte-regel">
-                <div class="row-product">
-                  <div class="col-description">
-                    <div class="field-header">
-                      <div class="field-label-wrap">
-                        <span class="field-label">Product type</span>
+                  <!-- ══ SECTIE B: met aantal-kolom ══ -->
+                  <table>
+                    <tr>
+                      <td>
+                        <div class="offerte-sectie offerte-sectie--with-qty">
+                          <div class="offerte-regel">
+                            <div class="row-product">
+                              <!-- Rechts: aantal + prijs (elk 120px) -->
+                              <div class="col-right">
+                                <div class="col-price">
+                                  <div class="field-header">
+                                    <div class="field-label-wrap">
+                                      <span class="field-label">Prijs</span>
+                                    </div>
+                                    <div class="field-divider"></div>
+                                  </div>
+                                  <div class="field-value-price">
+                                    #Int_HK.Huurprijs#
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Links: omschrijving (groeit mee) -->
+                              <div class="col-left">
+                                <div class="col-description">
+                                  <div class="field-header">
+                                    <div class="field-label-wrap">
+                                      <span class="field-label"
+                                        >Product type</span
+                                      >
+                                    </div>
+                                    <div class="field-divider"></div>
+                                  </div>
+                                  <div class="field-value">
+                                    #Int_HK.EquipmentTypeName# -
+                                    #Int_HK.EquipmentDescription#
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  [HasThermostaatBolean]#Int_HK.Int_thermostaat#[/HasThermostaatBolean]
+                  [HasMeerwerkBolean]#Int_HK.Int_MeerwerkHuur#[/HasMeerwerkBolean]
+                  [HasKortingenBolean]#Int_HK.Int_Kortingen#[/HasKortingenBolean]
+                  <!-- Totaal box -->
+                  <div class="totaal-box">
+                    <div class="totaal-row">
+                      <div class="totaal-price">#Int_HK.EenmaligHuur#</div>
+                      <div class="totaal-label">
+                        Eenmalige factuur (incl. btw):
                       </div>
-                      <div class="field-divider"></div>
-                    </div>
-                    <div class="field-value">
-                      CV/combi - Remeha Tzerra Ace Matic CW5 CCS 60/100
                     </div>
                   </div>
-                  <div class="col-price">
-                    <div class="field-header">
-                      <div class="field-label-wrap">
-                        <span class="field-label">Prijs</span>
-                      </div>
-                      <div class="field-divider"></div>
-                    </div>
-                    <div class="field-value-price">&euro; 3.089,77</div>
+                  <div class="goed-om-te-weten">
+                    <div class="gotw-title">Goed om te weten</div>
+                    <div class="gotw-body">#Int_HK.OpmerkingenKlant#</div>
                   </div>
-                </div>
-              </div>
-
-              <!-- Totaal box -->
-              <div class="totaal-box">
-                <div class="totaal-row">
-                  <div class="totaal-label">
-                    Totaalbedrag inclusief installatie
-                  </div>
-                  <div class="totaal-price">&euro; 2789,77</div>
-                </div>
-              </div>
-            </div>
-            <!-- /offerte-sectie -->
-
-            <!-- Goed om te weten -->
-            <div class="goed-om-te-weten">
-              <div class="gotw-title">Goed om te weten</div>
-              <div class="gotw-body">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                nostrud exerci tation ullam corper suscipit lobortis nisl ut
-                aliquip ex ea commodo consequat.
-              </div>
-            </div>
-            <!-- Jouw gegevens -->
+                </td>
+              </tr>
+            </table>
           </div>
           <!-- /col-main -->
 

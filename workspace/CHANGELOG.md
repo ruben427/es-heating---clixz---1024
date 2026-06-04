@@ -18,6 +18,40 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 </instructions>
 
 <changelog>
+## 2026-06-04 (session 35)
+- `components/offerte-sheet.css`: `.row-product` global rule changed from `row` → `row-reverse` above 480px
+- `@media (max-width: 480px)` still overrides to `column-reverse` for mobile
+
+## 2026-06-04 (session 33)
+- `components/offerte-sheet.css`: `.col-price` global rule added with `gap: 4px` (previous sessions already landed gap:32px on col-main, gap:4px on col-description, padding-bottom:24px on offerte-sectie)
+
+## 2026-06-04 (session 32)
+- `components/offerte-sheet.css`: `.row-product` → `justify-content: flex-end` zodat alles daarbinnen rechts uitlijnt
+
+## 2026-06-04 (session 31)
+- `components/offerte-sheet.css`: `.col-right` → `justify-content: flex-end` so col-price aligns to the right edge
+
+## 2026-06-04 (session 30)
+- `components/offerte-sheet.css`: `.row-product` desktop → `row-reverse` (col-right DOM-first → visueel rechts, col-left visueel links)
+- `components/offerte-sheet.css`: `.row-product` mobiel ≤600px → `column-reverse` (col-right DOM-first → visueel onderaan, col-left visueel bovenaan)
+
+## 2026-06-04 (session 29)
+- `components/offerte-sheet.css`: `.offerte-regel` padding-top removed → `padding: 0 12px 24px 12px`
+- `components/offerte-sheet.css`: `.row-product` changed from `row-reverse` → `row` (2-part layout: col-left flex, col-right 200px fixed)
+
+## 2026-06-04 (session 28)
+- `components/offerte-sheet.css`: `@media (max-width: 600px)` — `.col-right` `flex: 0 0 200px` → `flex: 0 0 auto` so flex-basis no longer acts as height in column-reverse context; `width: 200px` kept for horizontal alignment
+
+## 2026-06-04 (session 27)
+- `components/offerte-sheet.css`: `.col-main` gap changed from `56px` → `12px`
+
+## 2026-06-04 (session 26)
+- `components/offerte-sheet.css`: `@media (max-width: 600px)` — `.offerte-page .col-description` → `width: 100%; flex: 1 1 100%`
+
+## 2026-06-04 (session 25)
+- `components/offerte-sheet.css`: `.col-right` vaste breedte `200px` (desktop + mobiel)
+- `@media (max-width: 600px)`: `.col-right` behoudt `200px`, `margin-left: auto` → rechts uitgelijnd in de rij
+
 ## 2026-06-04 (session 24)
 - `components/offerte-sheet.css`: `@media (max-width: 600px)` — `.row-product` gewijzigd van `column` naar `column-reverse`
 - DOM-volgorde is col-right boven col-left; `column-reverse` keert dit om zodat col-left visueel bovenaan staat

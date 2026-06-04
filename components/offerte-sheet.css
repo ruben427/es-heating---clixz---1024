@@ -1,3 +1,5 @@
+
+]
 /* ══════════════════════════════════════
    Offerte Sheet Component Styles
    components/offerte-sheet.css
@@ -10,9 +12,16 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 56px;
-  width: 100%;
+  width: 60%;
   min-width: 0;
   padding-bottom: 48px;
+}
+
+/* ── col-main responsive (was in offerte.css @media) ── */
+@media (max-width: 768px) {
+  .col-main {
+    width: 100%;
+  }
 }
 
 /* ── Quote header block ── */
@@ -113,6 +122,16 @@
   text-decoration: underline;
 }
 
+/* ── Offerte regel wrapper ── */
+.offerte-regel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  width: 100%;
+}
+
 /* ── Offerte sectie (product rows container) ── */
 .offerte-sectie {
   display: flex;
@@ -121,23 +140,14 @@
   gap: 24px;
   align-self: stretch;
   width: 100%;
+  padding-bottom: 24px;
 }
 
 /* ── Single product row ── */
-.offerte-regel {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-  padding: 24px 12px;
-  align-self: stretch;
-  width: 100%;
-  box-sizing: border-box;
-}
 
 .row-product {
   display: flex;
-  flex-direction: row-reverse; /* col-right first in DOM → renders right */
+  flex-direction: row-reverse;
   align-items: flex-start;
   gap: 0;
   align-self: stretch;
@@ -153,50 +163,35 @@
   gap: 0;
 }
 
-/* ── Right column: holds qty and/or price at fixed 120px each ── */
+/* ── Right column: holds qty and/or price — fixed width, right-aligned ── */
 .col-right {
   flex: 0 0 auto;
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   align-items: flex-start;
   gap: 0;
 }
+
 
 /* ── Description column (fills col-left) ── */
 .col-description {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 11px;
+  gap: 4px;
   width: 100%;
   min-width: 0;
 }
 
-/* ── Quantity column — fixed 120px ── */
-.col-qty {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 11px;
-  flex: 0 0 120px;
-  width: 120px;
-  padding-left: 12px;
-  box-sizing: border-box;
-  align-self: stretch;
-}
-
-/* ── Price column — fixed 120px ── */
+/* ── Price column ── */
 .col-price {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 11px;
-  flex: 0 0 120px;
-  width: 120px;
-  padding-left: 12px;
-  box-sizing: border-box;
-  align-self: stretch;
+  gap: 4px;
 }
+
 
 /* ── Field header (label + divider line) ── */
 .field-header {
@@ -215,7 +210,7 @@
   justify-content: center;
   gap: 12px;
   padding: 0 8px 0 0;
-  flex: 0 0 auto;
+  flex: 0 auto;
   background-color: #ffffff;
 }
 
@@ -278,6 +273,7 @@
 
 .totaal-row {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   gap: 0;
   align-self: stretch;
@@ -292,8 +288,7 @@
   font-size: 16px;
   letter-spacing: 0;
   line-height: 24px;
-  flex: 0 0 70%;
-  width: 70%;
+  flex: 1 1 auto;
   min-width: 0;
 }
 
@@ -305,9 +300,8 @@
   text-align: right;
   letter-spacing: 0;
   line-height: 24px;
-  flex: 0 0 30%;
-  width: 30%;
-  min-width: 100px;
+  flex: 0 0 auto;
+  min-width: 0;
   padding-left: 12px;
   box-sizing: border-box;
 }
@@ -350,11 +344,6 @@
     line-height: 30px;
   }
 
-  .offerte-regel {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
   .field-value-price {
     text-align: right;
   }
@@ -362,17 +351,10 @@
   .totaal-row {
     gap: 0;
   }
-
-  .totaal-price {
-    flex: 0 0 30%;
-    width: 30%;
-    min-width: 100px;
-    flex-shrink: 0;
-  }
 }
 
-@media (max-width: 600px) {
-  /* col-right staat eerst in de DOM → column-reverse zorgt dat col-left visueel bovenaan staat */
+@media (max-width: 480px) {
+  /* DOM-volgorde: col-right boven col-left → column-reverse zorgt dat col-left visueel bovenaan staat */
   .row-product {
     flex-direction: column-reverse;
   }
@@ -382,25 +364,24 @@
     width: 100%;
   }
 
-  /* col-right becomes a horizontal row: aantal left, prijs right */
-  .col-right {
-    flex-direction: row;
+  /* col-description full width under 600px */
+  .offerte-page .col-description {
     width: 100%;
-    justify-content: space-between;
+    flex: 1 100%;
+  }
+
+  /* col-right volledige breedte, alles rechts uitgelijnd */
+  .col-right {
+    width: 100%;
+    flex: 0 0 100%;
+    flex-direction: row;
+    justify-content: flex-end;
   }
 
   /* Both qty and price columns grow equally and reset fixed width */
-  .col-qty,
-  .col-price {
-    flex: 1 1 auto;
-    width: auto;
-    padding-left: 0;
-  }
 
   /* Aantal (col-qty) left-aligned — already set globally, but confirm here */
-  .col-qty {
-    align-items: flex-start;
-  }
+
 
   /* Prijs (col-price) right-aligned */
   .col-price {
@@ -408,7 +389,6 @@
   }
 
   /* field-header divider still fills available space */
-  .col-qty .field-header,
   .col-price .field-header {
     width: 100%;
   }
